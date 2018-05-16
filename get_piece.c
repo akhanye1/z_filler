@@ -62,11 +62,11 @@ char		get_piece(char *line, t_player *player, int debug_fd)
 	if (ft_strstr(line, "Piece"))
 	{
 		player->piece_countdown = player->piece_height;
-		ft_putstr_fd("Piece Height : ", debug_fd);
-		ft_putnbr_fd(player->piece_height, debug_fd);
-		ft_putstr_fd("\nPiece Width : ", debug_fd);
-		ft_putnbr_fd(player->piece_width, debug_fd);
-		ft_putchar_fd('\n', debug_fd);
+		// ft_putstr_fd("Piece Height : ", debug_fd);
+		// ft_putnbr_fd(player->piece_height, debug_fd);
+		// ft_putstr_fd("\nPiece Width : ", debug_fd);
+		// ft_putnbr_fd(player->piece_width, debug_fd);
+		// ft_putchar_fd('\n', debug_fd);
 	}
 	if (ft_strstr(line, "Piece"))
 		return (1);

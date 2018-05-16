@@ -79,7 +79,7 @@ int	main(/*int ac, char **av**/)
 		if (player->done_reading == 1)
 		{
 			play_piece(player, fd, &spoint);
-			ft_putendl_fd(">>>>>>>>", fd);
+			ft_putendl_fd("\n>>>>>>>>\n", fd);
 		}
 		//free(line);
 	}

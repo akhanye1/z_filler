@@ -1,6 +1,6 @@
 #include "filler.h"
 
-static void  find_right(t_player *player, int dir, t_point *point)
+static void  find_right(t_player *player, int dir, t_point *point, int debug_fd)
 {
     int     y;
     int     x;
@@ -18,14 +18,17 @@ static void  find_right(t_player *player, int dir, t_point *point)
     while (x > 0 && ((y < (player->p_height - 1) && dir == UP) ||
         (y > 0 && dir == DOWN)) && !piece_found)
     {
+        ft_putnbr_fd(x, debug_fd);
+        ft_putchar_fd(' ', debug_fd);
         x--;
         if (x == 0)
         {
             y = (dir == UP) ? y + 1 : y - 1;
             x = 0;
+            ft_putchar_fd('\n', debug_fd);
         }
         piece_found = (player->plateau_piece[y][x] == player->piece_small ||
-            player->plateau_piece[y][x] == player->piece_small);
+            player->plateau_piece[y][x] == player->piece_large);
     }
     if (piece_found)
     {
@@ -83,7 +86,7 @@ static char find_piece(t_player *player, t_point *point, int up_down, int left_r
     if (left_right == LEFT)
         find_left(player, up_down, point, debug_fd);
     else
-        find_right(player, up_down, point);
+        find_right(player, up_down, point, debug_fd);
     ft_putstr_fd("X Position : ", debug_fd);
     ft_putnbr_fd(point->x, debug_fd);
     ft_putchar_fd('\n', debug_fd);
@@ -97,7 +100,7 @@ static void find_spot(t_player *player, t_point *point, int up_down, int debug_f
     int check_side;
 
     tries = 0;
-    y = (up_down == UP) ? 0 : player->p_height - 1;
+    y = (up_down == UP) ? 0 : player->p_height - 2;
     check_side = player->second_priority;
     while ((tries < 2) && ((y < (player->p_height - 1) && up_down == UP) ||
         (y > 0 && up_down == DOWN)))

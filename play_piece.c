@@ -59,10 +59,14 @@ void	get_advantage(int debug_fd, t_player *player, t_point *point)
 		// ft_putstr_fd("Y : ", debug_fd);
 		// ft_putnbr_fd(player->decision.bottom.y, debug_fd);
 		// ft_putchar_fd('\n', debug_fd);
+		ft_putstr_fd("Bottom height : ", debug_fd);
+		ft_putnbr_fd(player->p_height - 1, debug_fd);
+		ft_putchar_fd('\n', debug_fd);
 		if (player->decision.bottom.y >= (player->p_height - 1))
 			player->priority = UP;
 		else
 			player->priority = DOWN;
+		ft_putendl_fd((player->priority == UP) ? "UP" : "DOWN", debug_fd);
 		// point->y = player->decision.bottom.y;
 		// point->x = player->decision.bottom.x;
 		// ft_putstr_fd(">>>> Go down", debug_fd);

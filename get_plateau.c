@@ -62,11 +62,11 @@ char		get_plateau(char *line, t_player *player, int debug_fd)
 	if (ft_strstr(line, "Plateau"))
 	{
 		player->p_countdown = player->p_height;
-		ft_putstr_fd("Plateau Height : ", debug_fd);
-		ft_putnbr_fd(player->p_height, debug_fd);
-		ft_putstr_fd("\nPlateau Width : ", debug_fd);
-		ft_putnbr_fd(player->p_width, debug_fd);
-		ft_putchar_fd('\n', debug_fd);
+		// ft_putstr_fd("Plateau Height : ", debug_fd);
+		// ft_putnbr_fd(player->p_height, debug_fd);
+		// ft_putstr_fd("\nPlateau Width : ", debug_fd);
+		// ft_putnbr_fd(player->p_width, debug_fd);
+		// ft_putchar_fd('\n', debug_fd);
 	}
 	if (ft_strstr(line, "Plateau"))
 		return (1);

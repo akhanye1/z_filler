@@ -63,7 +63,6 @@ int	main(/*int ac, char **av**/)
 	spoint.x = 0;
 	while (get_next_line(rd, &line) > 0)
 	{
-		ft_putstr_fd(">> ", fd);
 		ft_putendl_fd(line, fd_debug);
 		if (ft_strstr(line, "$$$ exec p"))
 			get_player_info(line, player, fd);

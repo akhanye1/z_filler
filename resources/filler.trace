@@ -1,6 +1,4 @@
-seed = 5169
-O: error on input
-../filler: Segfault at 18
+seed = 4968
 ../filler won
 Score:
-18AGAINST0
+73AGAINST0

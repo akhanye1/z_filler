@@ -51,6 +51,8 @@ static char	scan_enemy_pieces(int debug_fd, t_player *player)
 
 void	get_advantage(int debug_fd, t_player *player, t_point *point)
 {
+	if (player->closed)
+		return ;
 	if (player->decision.bottom.y < player->enemy.top.y)
 	{
 		// ft_putstr_fd("Plateau Height (compare): ", debug_fd);

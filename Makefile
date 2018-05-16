@@ -26,9 +26,11 @@ $(NAME):
 	gcc $(SRC) -o $(NAME)
 
 clean:
+	make clean -C libft/
 	rm -f $(NAME)
 
 fclean: clean
+	make fclean -C libft/
 	rm -f $(NAME)
 
 re: fclean all

@@ -133,6 +133,7 @@ static void find_spot(t_player *player, t_point *point, int up_down, int debug_f
             ft_putendl_fd("\n\nCHANGE SIDE\n\n", debug_fd);
             y = (up_down == UP) ? 0 : player->p_height - 2;
             check_side = (check_side == LEFT) ? RIGHT : LEFT;
+            player->second_priority = check_side;
             tries++;
         }
     }

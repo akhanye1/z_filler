@@ -8,7 +8,8 @@ Bottom : 13 14
 Bottom height : 15
 DOWN
 Priority : DOWN | Second Priority : RIGHT - Not closed
-{[*](O)0|9, 0|2}  <1>  {[*](.)0|9, 1|3}  <1>  
+{[*](O)0|9, 0|2}  <1>  
+{[*](.)1|10, 0|2}  <1>  
 
 >>>>>>>>
 
@@ -19,14 +20,14 @@ LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
 Top : 9 2
-Right : 9 3
+Right : 9 2
 LEFT : 9 2
-Bottom : 9 2
+Bottom : 10 2
 Bottom height : 15
 DOWN
 Priority : DOWN | Second Priority : RIGHT - Not closed
-{[*](O)0|9, 0|3}  <1>  
-{[*](.)1|10, 0|3}  <1>  
+{[*](O)0|10, 0|2}  <1>  {[*](.)0|10, 1|3}  <1>  
+{[*](.)1|11, 0|2}  <1>  {[*](.)1|11, 1|3}  <1>  
 
 >>>>>>>>
 
@@ -37,14 +38,16 @@ LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
 Top : 9 2
-Right : 9 3
+Right : 10 3
 LEFT : 9 2
-Bottom : 10 3
+Bottom : 11 2
 Bottom height : 15
 DOWN
 Priority : DOWN | Second Priority : RIGHT - Not closed
-{[*](O)0|10, 0|3}  <1>  {[*](.)0|10, 1|4}  <1>  {[.](.)0|10, 2|5}  <1>  
-{[*](.)1|11, 0|3}  <1>  {[*](.)1|11, 1|4}  <1>  {[*](.)1|11, 2|5}  <1>  
+{[.](O)0|11, 0|3}  <0>  {[*](.)0|11, 1|4}  <0>  {[*](.)0|11, 2|5}  <0>  
+{[.](.)1|12, 0|3}  <0>  {[.](.)1|12, 1|4}  <0>  {[.](.)1|12, 2|5}  <0>  
+{[.](O)0|11, 0|2}  <0>  {[*](O)0|11, 1|3}  <1>  {[*](.)0|11, 2|4}  <1>  
+{[.](.)1|12, 0|2}  <1>  {[.](.)1|12, 1|3}  <1>  {[.](.)1|12, 2|4}  <1>  
 
 >>>>>>>>
 
@@ -55,16 +58,18 @@ LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
 Top : 9 2
-Right : 11 5
+Right : 11 4
 LEFT : 9 2
 Bottom : 11 3
 Bottom height : 15
 DOWN
 Priority : DOWN | Second Priority : RIGHT - Not closed
-{[.](O)0|11, 0|5}  <0>  {[*](.)0|11, 1|6}  <0>  {[.](.)0|11, 2|7}  <0>  
-{[.](.)1|12, 0|5}  <0>  {[*](.)1|12, 1|6}  <0>  {[*](.)1|12, 2|7}  <0>  
-{[.](O)0|11, 0|4}  <0>  {[*](O)0|11, 1|5}  <1>  {[.](.)0|11, 2|6}  <1>  
-{[.](.)1|12, 0|4}  <1>  {[*](.)1|12, 1|5}  <1>  {[*](.)1|12, 2|6}  <1>  
+{[.](O)0|11, 0|4}  <0>  {[.](.)0|11, 1|5}  <0>  {[*](.)0|11, 2|6}  <0>  
+{[*](.)1|12, 0|4}  <0>  {[*](.)1|12, 1|5}  <0>  {[*](.)1|12, 2|6}  <0>  
+{[.](O)0|11, 0|3}  <0>  {[.](O)0|11, 1|4}  <0>  {[*](.)0|11, 2|5}  <0>  
+{[*](.)1|12, 0|3}  <0>  {[*](.)1|12, 1|4}  <0>  {[*](.)1|12, 2|5}  <0>  
+{[.](O)0|11, 0|2}  <0>  {[.](O)0|11, 1|3}  <0>  {[*](O)0|11, 2|4}  <1>  
+{[*](.)1|12, 0|2}  <1>  {[*](.)1|12, 1|3}  <1>  {[*](.)1|12, 2|4}  <1>  
 
 >>>>>>>>
 
@@ -75,14 +80,22 @@ LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
 Top : 9 2
-Right : 12 6
+Right : 11 4
 LEFT : 9 2
-Bottom : 12 5
+Bottom : 12 2
 Bottom height : 15
 DOWN
 Priority : DOWN | Second Priority : RIGHT - Not closed
-{[*](O)0|12, 0|6}  <1>  
-{[*](.)1|13, 0|6}  <1>  
+{[.](O)0|12, 0|4}  <0>  {[.](.)0|12, 1|5}  <0>  {[.](.)0|12, 2|6}  <0>  
+{[*](.)1|13, 0|4}  <0>  {[*](.)1|13, 1|5}  <0>  {[.](.)1|13, 2|6}  <0>  
+{[.](O)0|12, 0|3}  <0>  {[.](O)0|12, 1|4}  <0>  {[.](.)0|12, 2|5}  <0>  
+{[*](.)1|13, 0|3}  <0>  {[*](.)1|13, 1|4}  <0>  {[.](.)1|13, 2|5}  <0>  
+{[.](O)0|12, 0|2}  <0>  {[.](O)0|12, 1|3}  <0>  {[.](O)0|12, 2|4}  <0>  
+{[*](.)1|13, 0|2}  <0>  {[*](.)1|13, 1|3}  <0>  {[.](.)1|13, 2|4}  <0>  
+{[.](.)0|12, 0|1}  <0>  {[.](O)0|12, 1|2}  <0>  {[.](O)0|12, 2|3}  <0>  
+{[*](.)1|13, 0|1}  <0>  {[*](.)1|13, 1|2}  <0>  {[.](.)1|13, 2|3}  <0>  
+12{[.](O)0|11, 0|4}  <0>  {[.](.)0|11, 1|5}  <0>  {[.](.)0|11, 2|6}  <0>  
+{[*](O)1|12, 0|4}  <1>  {[*](.)1|12, 1|5}  <1>  {[.](.)1|12, 2|6}  <1>  
 
 >>>>>>>>
 
@@ -93,189 +106,14 @@ LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
 Top : 9 2
-Right : 12 6
+Right : 12 5
 LEFT : 9 2
-Bottom : 13 6
-Priority : UP | Second Priority : RIGHT - Not closed
-{[*](.)0|8, 0|3}  <0>  
-{[*](O)1|9, 0|3}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 8 3
-Right : 12 6
-LEFT : 9 2
-Bottom : 13 6
-Priority : UP | Second Priority : RIGHT - Not closed
-{[*](.)0|7, 0|3}  <0>  {[.](.)0|7, 1|4}  <0>  {[.](.)0|7, 2|5}  <0>  
-{[*](O)1|8, 0|3}  <1>  {[.](.)1|8, 1|4}  <1>  {[.](.)1|8, 2|5}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 7 3
-Right : 12 6
-LEFT : 9 2
-Bottom : 13 6
-Priority : UP | Second Priority : RIGHT - Not closed
-{[*](.)0|6, 0|3}  <0>  
-{[*](O)1|7, 0|3}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 6 3
-Right : 12 6
-LEFT : 9 2
-Bottom : 13 6
-Priority : UP | Second Priority : RIGHT - Not closed
-{[*](O)0|6, 0|3}  <1>  {[*](.)0|6, 1|4}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 6 3
-Right : 12 6
-LEFT : 9 2
-Bottom : 13 6
-Priority : UP | Second Priority : RIGHT - Not closed
-{[*](.)0|5, 0|4}  <0>  
-{[*](O)1|6, 0|4}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 5 4
-Right : 12 6
-LEFT : 9 2
-Bottom : 13 6
-Priority : UP | Second Priority : RIGHT - Not closed
-{[.](.)0|4, 0|4}  <0>  {[*](.)0|4, 1|5}  <0>  
-{[.](O)1|5, 0|4}  <0>  {[*](.)1|5, 1|5}  <0>  
-{[.](.)0|4, 0|3}  <0>  {[*](.)0|4, 1|4}  <0>  
-{[.](.)1|5, 0|3}  <0>  {[*](O)1|5, 1|4}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 4 4
-Right : 12 6
-LEFT : 9 2
-Bottom : 13 6
-Priority : UP | Second Priority : RIGHT - Not closed
-{[.](.)0|3, 0|4}  <0>  {[.](.)0|3, 1|5}  <0>  
-{[*](O)1|4, 0|4}  <1>  {[*](.)1|4, 1|5}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 4 4
-Right : 12 6
-LEFT : 9 2
-Bottom : 13 6
-Priority : UP | Second Priority : RIGHT - Not closed
-{[.](O)0|4, 0|5}  <0>  {[*](.)0|4, 1|6}  <0>  {[*](.)0|4, 2|7}  <0>  
-{[.](O)0|4, 0|4}  <0>  {[*](O)0|4, 1|5}  <1>  {[*](.)0|4, 2|6}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 4 5
-Right : 12 6
-LEFT : 9 2
-Bottom : 13 6
-Priority : UP | Second Priority : RIGHT - Not closed
-{[*](.)0|3, 0|6}  <0>  
-{[*](O)1|4, 0|6}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 3 6
-Right : 12 6
-LEFT : 9 2
-Bottom : 13 6
-Priority : UP | Second Priority : RIGHT - Not closed
-{[*](.)0|2, 0|6}  <0>  
-{[*](O)1|3, 0|6}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 2 6
-Right : 12 6
-LEFT : 9 2
-Bottom : 13 6
-Priority : UP | Second Priority : RIGHT - Not closed
-{[*](.)0|1, 0|6}  <0>  
-{[*](O)1|2, 0|6}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 1 6
-Right : 12 6
-LEFT : 9 2
-Bottom : 13 6
+Bottom : 12 4
+Bottom height : 15
+DOWN
 Priority : DOWN | Second Priority : RIGHT - Not closed
-{[.](O)0|13, 0|6}  <0>  {[*](.)0|13, 1|7}  <0>  {[*](.)0|13, 2|8}  <0>  {[*](.)0|13, 3|9}  <0>  
-{[.](.)0|13, 0|5}  <0>  {[*](O)0|13, 1|6}  <1>  {[*](.)0|13, 2|7}  <1>  {[*](.)0|13, 3|8}  <1>  
+{[*](O)0|12, 0|5}  <1>  {[.](.)0|12, 1|6}  <1>  
+{[*](.)1|13, 0|5}  <1>  {[.](.)1|13, 1|6}  <1>  
 
 >>>>>>>>
 
@@ -285,13 +123,19 @@ Right : 13 14
 LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
-Top : 1 6
-Right : 13 8
+Top : 9 2
+Right : 12 5
 LEFT : 9 2
-Bottom : 13 6
-Priority : DOWN | Second Priority : RIGHT - Not closed
-{[*](O)0|13, 0|8}  <1>  {[*](.)0|13, 1|9}  <1>  
-{[.](.)1|14, 0|8}  <1>  {[*](.)1|14, 1|9}  <1>  
+Bottom : 13 5
+Priority : UP | Second Priority : RIGHT - Not closed
+{[*](.)0|8, 0|2}  <0>  {[*](.)0|8, 1|3}  <0>  
+{[.](O)1|9, 0|2}  <0>  {[.](.)1|9, 1|3}  <0>  
+{[*](.)0|8, 0|1}  <0>  {[*](.)0|8, 1|2}  <0>  
+{[.](.)1|9, 0|1}  <0>  {[.](O)1|9, 1|2}  <0>  
+
+
+8{[*](O)0|9, 0|2}  <1>  {[*](.)0|9, 1|3}  <1>  
+{[.](O)1|10, 0|2}  <1>  {[.](O)1|10, 1|3}  <1>  
 
 >>>>>>>>
 
@@ -301,12 +145,15 @@ Right : 13 14
 LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
-Top : 1 6
-Right : 13 9
+Top : 9 2
+Right : 12 5
 LEFT : 9 2
-Bottom : 14 9
-Priority : DOWN | Second Priority : RIGHT - Not closed
-{[*](O)0|14, 0|9}  <1>  {[*](.)0|14, 1|10}  <1>  {[.](.)0|14, 2|11}  <1>  
+Bottom : 13 5
+Priority : UP | Second Priority : RIGHT - Not closed
+{[*](.)0|8, 0|3}  <0>  {[*](.)0|8, 1|4}  <0>  {[*](.)0|8, 2|5}  <0>  
+{[.](O)1|9, 0|3}  <0>  {[*](.)1|9, 1|4}  <0>  {[.](.)1|9, 2|5}  <0>  
+{[*](.)0|8, 0|2}  <0>  {[*](.)0|8, 1|3}  <0>  {[*](.)0|8, 2|4}  <0>  
+{[.](O)1|9, 0|2}  <0>  {[*](O)1|9, 1|3}  <1>  {[.](.)1|9, 2|4}  <1>  
 
 >>>>>>>>
 
@@ -316,13 +163,12 @@ Right : 13 14
 LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 10
+Top : 8 2
+Right : 12 5
 LEFT : 9 2
-Bottom : 14 9
-Priority : DOWN | Second Priority : RIGHT - Not closed
-{[*](O)0|14, 0|10}  <1>  {[*](.)0|14, 1|11}  <1>  
-{[*](.)1|15, 0|10}  <1>  {[*](.)1|15, 1|11}  <1>  
+Bottom : 13 5
+Priority : UP | Second Priority : RIGHT - Not closed
+{[*](O)0|8, 0|4}  <1>  {[*](.)0|8, 1|5}  <1>  {[.](.)0|8, 2|6}  <1>  
 
 >>>>>>>>
 
@@ -332,24 +178,13 @@ Right : 13 14
 LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 11
+Top : 8 4
+Right : 12 5
 LEFT : 9 2
-Bottom : 15 10
-Priority : DOWN | Second Priority : RIGHT - closed
-
-**** CLOSING PLATEAU ****
-Y : 14
-fill : RIGHT
-17 16 15 14 13 12 X Position : 11
-Attempting to place piece. Y - X : 14 11
-Priority : DOWN | Second Priority : RIGHT - closed
-{[*](O)0|14, 0|11}  <1>  {[.](.)0|14, 1|12}  <1>  {[.](.)0|14, 2|13}  <1>  
-{[*](O)1|15, 0|11}  <2>  
-{[*](O)0|14, 0|10}  <1>  {[.](O)0|14, 1|11}  <1>  {[.](.)0|14, 2|12}  <1>  
-{[*](O)1|15, 0|10}  <2>  
-{[*](O)0|14, 0|9}  <1>  {[.](O)0|14, 1|10}  <1>  {[.](O)0|14, 2|11}  <1>  
-{[*](.)1|15, 0|9}  <1>  {[.](O)1|15, 1|10}  <1>  {[.](O)1|15, 2|11}  <1>  
+Bottom : 13 5
+Priority : UP | Second Priority : RIGHT - Not closed
+{[*](.)0|7, 0|5}  <0>  
+{[*](O)1|8, 0|5}  <1>  
 
 >>>>>>>>
 
@@ -359,19 +194,13 @@ Right : 13 14
 LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 11
+Top : 7 5
+Right : 12 5
 LEFT : 9 2
-Bottom : 15 11
-Priority : DOWN | Second Priority : RIGHT - closed
-
-**** CLOSING PLATEAU ****
-Y : 14
-fill : RIGHT
-17 16 15 14 13 12 X Position : 11
-Attempting to place piece. Y - X : 14 11
-Priority : DOWN | Second Priority : RIGHT - closed
-{[*](O)0|14, 0|11}  <1>  {[*](.)0|14, 1|12}  <1>  {[*](.)0|14, 2|13}  <1>  
+Bottom : 13 5
+Priority : UP | Second Priority : RIGHT - Not closed
+{[*](.)0|6, 0|5}  <0>  
+{[*](O)1|7, 0|5}  <1>  
 
 >>>>>>>>
 
@@ -381,20 +210,12 @@ Right : 13 14
 LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 13
+Top : 6 5
+Right : 12 5
 LEFT : 9 2
-Bottom : 15 11
-Priority : DOWN | Second Priority : RIGHT - closed
-
-**** CLOSING PLATEAU ****
-Y : 14
-fill : RIGHT
-17 16 15 14 X Position : 13
-Attempting to place piece. Y - X : 14 13
-Priority : DOWN | Second Priority : RIGHT - closed
-{[*](O)0|14, 0|13}  <1>  
-{[*](.)1|15, 0|13}  <1>  
+Bottom : 13 5
+Priority : UP | Second Priority : RIGHT - Not closed
+{[*](O)0|6, 0|5}  <1>  {[*](.)0|6, 1|6}  <1>  
 
 >>>>>>>>
 
@@ -404,19 +225,12 @@ Right : 13 14
 LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 13
+Top : 6 5
+Right : 6 6
 LEFT : 9 2
-Bottom : 15 11
-Priority : DOWN | Second Priority : RIGHT - closed
-
-**** CLOSING PLATEAU ****
-Y : 14
-fill : RIGHT
-17 16 15 14 X Position : 13
-Attempting to place piece. Y - X : 14 13
-Priority : DOWN | Second Priority : RIGHT - closed
-{[*](O)0|14, 0|13}  <1>  {[*](.)0|14, 1|14}  <1>  
+Bottom : 13 5
+Priority : UP | Second Priority : RIGHT - Not closed
+{[*](O)0|6, 0|6}  <1>  {[*](.)0|6, 1|7}  <1>  {[.](.)0|6, 2|8}  <1>  
 
 >>>>>>>>
 
@@ -426,20 +240,13 @@ Right : 13 14
 LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 14
+Top : 6 6
+Right : 6 7
 LEFT : 9 2
-Bottom : 15 11
-Priority : DOWN | Second Priority : RIGHT - closed
-
-**** CLOSING PLATEAU ****
-Y : 14
-fill : RIGHT
-17 16 15 X Position : 14
-Attempting to place piece. Y - X : 14 14
-Priority : DOWN | Second Priority : RIGHT - closed
-{[*](O)0|14, 0|14}  <1>  {[*](.)0|14, 1|15}  <1>  
-{[.](.)1|15, 0|14}  <1>  {[*](.)1|15, 1|15}  <1>  
+Bottom : 13 5
+Priority : UP | Second Priority : RIGHT - Not closed
+{[*](.)0|5, 0|7}  <0>  
+{[*](O)1|6, 0|7}  <1>  
 
 >>>>>>>>
 
@@ -449,19 +256,19 @@ Right : 13 14
 LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 15
+Top : 5 7
+Right : 6 7
 LEFT : 9 2
-Bottom : 15 11
-Priority : DOWN | Second Priority : RIGHT - closed
-
-**** CLOSING PLATEAU ****
-Y : 14
-fill : RIGHT
-17 16 X Position : 15
-Attempting to place piece. Y - X : 14 15
-Priority : DOWN | Second Priority : RIGHT - closed
-{[*](O)0|14, 0|15}  <1>  {[*](.)0|14, 1|16}  <1>  
+Bottom : 13 5
+Priority : UP | Second Priority : RIGHT - Not closed
+{[*](.)0|4, 0|7}  <0>  {[*](.)0|4, 1|8}  <0>  
+{[.](O)1|5, 0|7}  <0>  {[.](.)1|5, 1|8}  <0>  
+{[*](.)0|4, 0|6}  <0>  {[*](.)0|4, 1|7}  <0>  
+{[.](.)1|5, 0|6}  <0>  {[.](O)1|5, 1|7}  <0>  
+{[*](.)0|4, 0|5}  <0>  {[*](.)0|4, 1|6}  <0>  
+{[.](.)1|5, 0|5}  <0>  {[.](.)1|5, 1|6}  <0>  
+4{[*](O)0|5, 0|7}  <1>  {[*](.)0|5, 1|8}  <1>  
+{[.](O)1|6, 0|7}  <1>  {[.](.)1|6, 1|8}  <1>  
 
 >>>>>>>>
 
@@ -471,22 +278,15 @@ Right : 13 14
 LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 16
+Top : 5 7
+Right : 5 8
 LEFT : 9 2
-Bottom : 15 11
-Priority : DOWN | Second Priority : RIGHT - closed
-
-**** CLOSING PLATEAU ****
-Y : 14
-fill : RIGHT
-17 X Position : 16
-Attempting to place piece. Y - X : 14 16
-Priority : DOWN | Second Priority : RIGHT - closed
-{[.](O)0|14, 0|16}  <0>  
-{[.](.)1|15, 0|16}  <0>  
-{[.](O)0|14, 0|15}  <0>  {[*](O)0|14, 1|16}  <1>  
-{[.](O)1|15, 0|15}  <1>  {[*](.)1|15, 1|16}  <1>  
+Bottom : 13 5
+Priority : UP | Second Priority : RIGHT - Not closed
+{[.](.)0|4, 0|8}  <0>  {[*](.)0|4, 1|9}  <0>  {[*](.)0|4, 2|10}  <0>  
+{[.](O)1|5, 0|8}  <0>  {[*](.)1|5, 1|9}  <0>  {[*](.)1|5, 2|10}  <0>  
+{[.](.)0|4, 0|7}  <0>  {[*](.)0|4, 1|8}  <0>  {[*](.)0|4, 2|9}  <0>  
+{[.](O)1|5, 0|7}  <0>  {[*](O)1|5, 1|8}  <1>  {[*](.)1|5, 2|9}  <1>  
 
 >>>>>>>>
 
@@ -496,26 +296,12 @@ Right : 13 14
 LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 16
+Top : 4 8
+Right : 4 9
 LEFT : 9 2
-Bottom : 15 11
-Priority : DOWN | Second Priority : RIGHT - closed
-
-**** CLOSING PLATEAU ****
-Y : 14
-fill : RIGHT
-17 X Position : 16
-Attempting to place piece. Y - X : 14 16
-Priority : DOWN | Second Priority : RIGHT - closed
-{[*](O)0|14, 0|16}  <1>  
-{[*](O)1|15, 0|16}  <2>  
-{[*](O)0|14, 0|15}  <1>  {[.](O)0|14, 1|16}  <1>  
-{[*](O)1|15, 0|15}  <2>  
-{[*](O)0|14, 0|14}  <1>  {[.](O)0|14, 1|15}  <1>  
-{[*](.)1|15, 0|14}  <1>  {[*](O)1|15, 1|15}  <2>  
-14{[*](.)0|13, 0|16}  <0>  
-{[*](O)1|14, 0|16}  <1>  
+Bottom : 13 5
+Priority : UP | Second Priority : RIGHT - Not closed
+{[*](O)0|4, 0|9}  <1>  {[*](.)0|4, 1|10}  <1>  {[*](.)0|4, 2|11}  <1>  
 
 >>>>>>>>
 
@@ -525,26 +311,12 @@ Right : 13 14
 LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 16
+Top : 4 9
+Right : 4 11
 LEFT : 9 2
-Bottom : 15 11
-Priority : DOWN | Second Priority : RIGHT - closed
-
-**** CLOSING PLATEAU ****
-Y : 14
-fill : RIGHT
-17 X Position : 16
-Attempting to place piece. Y - X : 14 16
-Priority : DOWN | Second Priority : RIGHT - closed
-{[*](O)0|14, 0|16}  <1>  
-{[*](O)1|15, 0|16}  <2>  
-{[*](O)0|14, 0|15}  <1>  
-{[*](O)1|15, 0|15}  <2>  
-14{[*](O)0|13, 0|16}  <1>  
-{[*](O)1|14, 0|16}  <2>  
-{[*](.)0|13, 0|15}  <0>  
-{[*](O)1|14, 0|15}  <1>  
+Bottom : 13 5
+Priority : UP | Second Priority : RIGHT - Not closed
+{[*](O)0|4, 0|11}  <1>  {[*](.)0|4, 1|12}  <1>  {[*](.)0|4, 2|13}  <1>  
 
 >>>>>>>>
 
@@ -554,286 +326,8 @@ Right : 13 14
 LEFT : 13 14
 Bottom : 13 14
 SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 16
+Top : 4 11
+Right : 4 13
 LEFT : 9 2
-Bottom : 15 11
-Priority : DOWN | Second Priority : RIGHT - closed
-
-**** CLOSING PLATEAU ****
-Y : 14
-fill : RIGHT
-17 X Position : 16
-Attempting to place piece. Y - X : 14 16
-Priority : DOWN | Second Priority : RIGHT - closed
-{[*](O)0|14, 0|16}  <1>  
-{[*](O)1|15, 0|16}  <2>  
-{[*](O)0|14, 0|15}  <1>  
-{[*](O)1|15, 0|15}  <2>  
-14{[*](O)0|13, 0|16}  <1>  
-{[*](O)1|14, 0|16}  <2>  
-{[*](O)0|13, 0|15}  <1>  
-{[*](O)1|14, 0|15}  <2>  
-13Y : 13
-fill : RIGHT
-17 X Position : 16
-Attempting to place piece. Y - X : 13 16
-Priority : DOWN | Second Priority : RIGHT - closed
-{[*](O)0|13, 0|16}  <1>  
-{[*](O)1|14, 0|16}  <2>  
-{[*](O)0|13, 0|15}  <1>  
-{[*](O)1|14, 0|15}  <2>  
-13{[*](.)0|12, 0|16}  <0>  
-{[*](O)1|13, 0|16}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 16
-LEFT : 9 2
-Bottom : 15 11
-Priority : DOWN | Second Priority : RIGHT - closed
-
-**** CLOSING PLATEAU ****
-Y : 14
-fill : RIGHT
-17 X Position : 16
-Attempting to place piece. Y - X : 14 16
-Priority : DOWN | Second Priority : RIGHT - closed
-{[.](O)0|14, 0|16}  <0>  
-{[.](O)1|15, 0|16}  <0>  
-{[.](O)0|14, 0|15}  <0>  {[*](O)0|14, 1|16}  <1>  
-{[.](O)1|15, 0|15}  <1>  {[.](O)1|15, 1|16}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 16
-LEFT : 9 2
-Bottom : 15 11
-Priority : DOWN | Second Priority : RIGHT - closed
-
-**** CLOSING PLATEAU ****
-Y : 14
-fill : RIGHT
-17 X Position : 16
-Attempting to place piece. Y - X : 14 16
-Priority : DOWN | Second Priority : RIGHT - closed
-{[*](O)0|14, 0|16}  <1>  
-{[*](O)1|15, 0|16}  <2>  
-{[*](O)0|14, 0|15}  <1>  {[.](O)0|14, 1|16}  <1>  
-{[*](O)1|15, 0|15}  <2>  
-{[*](O)0|14, 0|14}  <1>  {[.](O)0|14, 1|15}  <1>  
-{[*](.)1|15, 0|14}  <1>  {[.](O)1|15, 1|15}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 16
-LEFT : 9 2
-Bottom : 15 11
-Priority : DOWN | Second Priority : RIGHT - closed
-
-**** CLOSING PLATEAU ****
-Y : 14
-fill : RIGHT
-17 X Position : 16
-Attempting to place piece. Y - X : 14 16
-Priority : DOWN | Second Priority : RIGHT - closed
-{[*](O)0|14, 0|16}  <1>  
-{[*](O)1|15, 0|16}  <2>  
-{[*](O)0|14, 0|15}  <1>  {[.](O)0|14, 1|16}  <1>  
-{[*](O)1|15, 0|15}  <2>  
-{[*](O)0|14, 0|14}  <1>  {[.](O)0|14, 1|15}  <1>  {[.](O)0|14, 2|16}  <1>  
-{[*](O)1|15, 0|14}  <2>  
-{[*](O)0|14, 0|13}  <1>  {[.](O)0|14, 1|14}  <1>  {[.](O)0|14, 2|15}  <1>  
-{[*](O)1|15, 0|13}  <2>  
-14{[*](O)0|13, 0|16}  <1>  
-{[*](O)1|14, 0|16}  <2>  
-{[*](O)0|13, 0|15}  <1>  {[.](O)0|13, 1|16}  <1>  
-{[*](O)1|14, 0|15}  <2>  
-
-{[*](O)1|14, 0|14}  <1>  {[*](O)1|14, 1|15}  <2>  
-{[*](.)0|13, 0|13}  <0>  {[.](X)0|13, 1|14}  <0>  {[.](O)0|13, 2|15}  <0>  
-{[*](O)1|14, 0|13}  <1>  {[*](O)1|14, 1|14}  <2>  
-13Y : 13
-fill : RIGHT
-17 X Position : 16
-Attempting to place piece. Y - X : 13 16
-Priority : DOWN | Second Priority : RIGHT - closed
-{[*](O)0|13, 0|16}  <1>  
-{[*](O)1|14, 0|16}  <2>  
-{[*](O)0|13, 0|15}  <1>  {[.](O)0|13, 1|16}  <1>  
-{[*](O)1|14, 0|15}  <2>  
-
-{[*](O)1|14, 0|14}  <1>  {[*](O)1|14, 1|15}  <2>  
-{[*](.)0|13, 0|13}  <0>  {[.](X)0|13, 1|14}  <0>  {[.](O)0|13, 2|15}  <0>  
-{[*](O)1|14, 0|13}  <1>  {[*](O)1|14, 1|14}  <2>  
-13{[*](O)0|12, 0|16}  <1>  
-{[*](O)1|13, 0|16}  <2>  
-{[*](.)0|12, 0|15}  <0>  {[.](O)0|12, 1|16}  <0>  
-{[*](O)1|13, 0|15}  <1>  {[*](O)1|13, 1|16}  <2>  
-{[*](.)0|12, 0|14}  <0>  {[.](.)0|12, 1|15}  <0>  {[.](O)0|12, 2|16}  <0>  
-
-{[*](.)0|12, 0|13}  <0>  {[.](.)0|12, 1|14}  <0>  {[.](.)0|12, 2|15}  <0>  
-{[*](.)1|13, 0|13}  <0>  
-12Y : 12
-fill : RIGHT
-17 X Position : 16
-Attempting to place piece. Y - X : 12 16
-Priority : DOWN | Second Priority : RIGHT - closed
-{[*](O)0|12, 0|16}  <1>  
-{[*](O)1|13, 0|16}  <2>  
-{[*](.)0|12, 0|15}  <0>  {[.](O)0|12, 1|16}  <0>  
-{[*](O)1|13, 0|15}  <1>  {[*](O)1|13, 1|16}  <2>  
-{[*](.)0|12, 0|14}  <0>  {[.](.)0|12, 1|15}  <0>  {[.](O)0|12, 2|16}  <0>  
-
-{[*](.)0|12, 0|13}  <0>  {[.](.)0|12, 1|14}  <0>  {[.](.)0|12, 2|15}  <0>  
-{[*](.)1|13, 0|13}  <0>  
-12{[*](.)0|11, 0|16}  <0>  
-{[*](O)1|12, 0|16}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 16
-LEFT : 9 2
-Bottom : 15 11
-Priority : DOWN | Second Priority : RIGHT - closed
-
-**** CLOSING PLATEAU ****
-Y : 14
-fill : RIGHT
-17 X Position : 16
-Attempting to place piece. Y - X : 14 16
-Priority : DOWN | Second Priority : RIGHT - closed
-{[.](O)0|14, 0|16}  <0>  
-{[*](O)1|15, 0|16}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 16
-LEFT : 9 2
-Bottom : 15 11
-Priority : DOWN | Second Priority : RIGHT - closed
-
-**** CLOSING PLATEAU ****
-Y : 14
-fill : RIGHT
-17 X Position : 16
-Attempting to place piece. Y - X : 14 16
-Priority : DOWN | Second Priority : RIGHT - closed
-{[.](O)0|14, 0|16}  <0>  
-{[*](O)1|15, 0|16}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 16
-LEFT : 9 2
-Bottom : 15 11
-Priority : DOWN | Second Priority : RIGHT - closed
-
-**** CLOSING PLATEAU ****
-Y : 14
-fill : RIGHT
-17 X Position : 16
-Attempting to place piece. Y - X : 14 16
-Priority : DOWN | Second Priority : RIGHT - closed
-{[.](O)0|14, 0|16}  <0>  
-{[*](O)1|15, 0|16}  <1>  
-
->>>>>>>>
-
-SUMMARY (ENEMY)
-Top : 13 14
-Right : 13 14
-LEFT : 13 14
-Bottom : 13 14
-SUMMARY (PLAYER)
-Top : 1 6
-Right : 14 16
-LEFT : 9 2
-Bottom : 15 11
-Priority : DOWN | Second Priority : RIGHT - closed
-
-**** CLOSING PLATEAU ****
-Y : 14
-fill : RIGHT
-17 X Position : 16
-Attempting to place piece. Y - X : 14 16
-Priority : DOWN | Second Priority : RIGHT - closed
-{[*](O)0|14, 0|16}  <1>  
-{[*](O)1|15, 0|16}  <2>  
-{[*](O)0|14, 0|15}  <1>  {[.](O)0|14, 1|16}  <1>  
-{[*](O)1|15, 0|15}  <2>  
-{[*](O)0|14, 0|14}  <1>  {[.](O)0|14, 1|15}  <1>  {[*](O)0|14, 2|16}  <2>  
-{[*](O)0|14, 0|13}  <1>  {[.](O)0|14, 1|14}  <1>  {[*](O)0|14, 2|15}  <2>  
-14{[*](O)0|13, 0|16}  <1>  
-{[*](O)1|14, 0|16}  <2>  
-{[*](O)0|13, 0|15}  <1>  {[.](O)0|13, 1|16}  <1>  
-{[*](O)1|14, 0|15}  <2>  
-
-{[*](O)1|14, 0|14}  <1>  {[*](O)1|14, 1|15}  <2>  
-{[*](.)0|13, 0|13}  <0>  {[.](X)0|13, 1|14}  <0>  {[*](O)0|13, 2|15}  <1>  
-{[*](O)1|14, 0|13}  <2>  
-13Y : 13
-fill : RIGHT
-17 X Position : 16
-Attempting to place piece. Y - X : 13 16
-Priority : DOWN | Second Priority : RIGHT - closed
-{[*](O)0|13, 0|16}  <1>  
-{[*](O)1|14, 0|16}  <2>  
-{[*](O)0|13, 0|15}  <1>  {[.](O)0|13, 1|16}  <1>  
-{[*](O)1|14, 0|15}  <2>  
-
-{[*](O)1|14, 0|14}  <1>  {[*](O)1|14, 1|15}  <2>  
-{[*](.)0|13, 0|13}  <0>  {[.](X)0|13, 1|14}  <0>  {[*](O)0|13, 2|15}  <1>  
-{[*](O)1|14, 0|13}  <2>  
-13{[*](O)0|12, 0|16}  <1>  
-{[*](O)1|13, 0|16}  <2>  
-{[*](.)0|12, 0|15}  <0>  {[.](O)0|12, 1|16}  <0>  
-{[*](O)1|13, 0|15}  <1>  {[*](O)1|13, 1|16}  <2>  
-{[*](.)0|12, 0|14}  <0>  {[.](.)0|12, 1|15}  <0>  {[*](O)0|12, 2|16}  <1>  
-
-
->>>>>>>>
-
-0 0
+Bottom : 13 5
+Priority : UP | Second Priority : RIGHT - Not closed

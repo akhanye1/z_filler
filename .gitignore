@@ -1,0 +1,8 @@
+filler.exe
+*.swp
+*.swo
+*exe*
+filler
+libft/*.a
+/.*
+libft/*.o

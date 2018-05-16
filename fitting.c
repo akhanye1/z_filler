@@ -102,7 +102,8 @@ char	    place_piece_right_up(t_player *player, t_point *pp, int debug_fd)
 		}
 	}
 	if (overlap == 1)
-		return ((pp->y + player->piece_height) <= player->p_height);
+		return (((pp->y + player->piece_height) <= player->p_height) &&
+			(pp->x + player->piece_width) <= player->p_width);
 	return (FALSE);
 }
 

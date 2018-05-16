@@ -45,7 +45,8 @@ char	    place_piece_right_up(t_player *player, t_point *pp, int debug_fd)
 	overlap = 0;
 	while (ps.y < player->piece_height && overlap != 1)
 	{
-		while (++y < player->piece_height && ((y + pp->y) < player->p_height) && overlap < 2)
+		while (++y < player->piece_height && ((y + pp->y) < player->p_height) &&
+			((y + pp->y) > 0) && overlap < 2)
 		{
 			while (++x < player->piece_width && ((x + pp->x) < player->p_width) &&
 				((x + pp->x) > 0) && no_enemy_piece(x + pp->x, y + pp->y, player, debug_fd, player->piece_piece[y][x]) &&

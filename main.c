@@ -31,12 +31,14 @@ int	main(/*int ac, char **av**/)
 {
 	char	*line;
 	char	*filename;
+	char	*filename2;
 	int		fd;
 	int		rd;
 	int		len;
 	char	*symbol;
 	t_player	*player;
 	t_point		spoint;
+	int		fd_debug;
 
 	/*if (ac != 2) {
 		ft_putendl("Usage: ./filler <filename>");
@@ -54,13 +56,15 @@ int	main(/*int ac, char **av**/)
 		ft_putendl("0 0");
 		return (EXIT_FAILURE);
 	}
+	filename2 = "play.txt";
+	fd_debug = open(filename2, O_CREAT | O_WRONLY | O_TRUNC, 0755);
 	init_player(player);
 	spoint.y = 1;
 	spoint.x = 0;
 	while (get_next_line(rd, &line) > 0)
 	{
-		//ft_putstr_fd(">> ", fd);
-		// ft_putendl_fd(line, fd);
+		ft_putstr_fd(">> ", fd);
+		ft_putendl_fd(line, fd_debug);
 		if (ft_strstr(line, "$$$ exec p"))
 			get_player_info(line, player, fd);
 		if (ft_strstr(line, "Plateau") || player->p_countdown > 0)

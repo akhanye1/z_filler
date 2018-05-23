@@ -87,7 +87,7 @@ static char find_piece(t_player *player, t_point *point, int up_down, int left_r
         find_left(player, up_down, point, debug_fd);
     else
         find_right(player, up_down, point, debug_fd);
-    ft_putstr_fd("X Position : ", debug_fd);
+    ft_putstr_fd(" X Position : ", debug_fd);
     ft_putnbr_fd(point->x, debug_fd);
     ft_putchar_fd('\n', debug_fd);
     return (point->x != -1);
@@ -106,7 +106,7 @@ static void find_spot(t_player *player, t_point *point, int up_down, int debug_f
         (y > 0 && up_down == DOWN)))
     {
         point->y = y;
-        ft_putstr_fd("Y : ", debug_fd);
+        ft_putstr_fd("\nY : ", debug_fd);
         ft_putnbr_fd(y, debug_fd);
         ft_putchar_fd('\n', debug_fd);
         if (find_piece(player, point, up_down, check_side, debug_fd))

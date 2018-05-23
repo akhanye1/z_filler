@@ -27,27 +27,17 @@ static void	init_player(t_player *player)
 	player->closed = FALSE;
 }
 
-int	main(/*int ac, char **av**/)
+int	main()
 {
 	char	*line;
 	char	*filename;
 	char	*filename2;
 	int		fd;
 	int		rd;
-	int		len;
-	char	*symbol;
 	t_player	*player;
 	t_point		spoint;
 	int		fd_debug;
 
-	/*if (ac != 2) {
-		ft_putendl("Usage: ./filler <filename>");
-		return (EXIT_FAILURE);
-	}
-	if ((rd = open(av[1], O_RDONLY)) == -1) {
-		ft_putendl("File cannot be open");
-		return (EXIT_FAILURE);
-	}*/
 	rd = 0;
 	filename = "debug.txt";
 	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0755);
@@ -67,24 +57,18 @@ int	main(/*int ac, char **av**/)
 		if (ft_strstr(line, "$$$ exec p"))
 			get_player_info(line, player, fd);
 		if (ft_strstr(line, "Plateau") || player->p_countdown > 0)
-		{
-			//ft_putendl_fd(line, fd);
 			get_plateau(line, player, fd);
-		}
 		if (ft_strstr(line, "Piece") || player->piece_countdown > 0)
-		{
-			//ft_putendl_fd(line, fd);
 			get_piece(line, player, fd);
-		}
 		if (player->done_reading == 1)
 		{
 			play_piece(player, fd, &spoint);
 			ft_putendl_fd("\n>>>>>>>>\n", fd);
 		}
-		//free(line);
 	}
 	ft_putendl_fd("0 0", fd);
 	close(fd);
+	close(fd_debug);
 	return (0);
 
 }

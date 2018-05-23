@@ -55,12 +55,6 @@ void	get_advantage(int debug_fd, t_player *player, t_point *point)
 		return ;
 	if (player->decision.bottom.y < player->enemy.top.y)
 	{
-		// ft_putstr_fd("Plateau Height (compare): ", debug_fd);
-		// ft_putnbr_fd(player->p_height, debug_fd);
-		// ft_putchar_fd('\n', debug_fd);
-		// ft_putstr_fd("Y : ", debug_fd);
-		// ft_putnbr_fd(player->decision.bottom.y, debug_fd);
-		// ft_putchar_fd('\n', debug_fd);
 		ft_putstr_fd("Bottom height : ", debug_fd);
 		ft_putnbr_fd(player->p_height - 1, debug_fd);
 		ft_putchar_fd('\n', debug_fd);
@@ -69,39 +63,18 @@ void	get_advantage(int debug_fd, t_player *player, t_point *point)
 		else
 			player->priority = DOWN;
 		ft_putendl_fd((player->priority == UP) ? "UP" : "DOWN", debug_fd);
-		// point->y = player->decision.bottom.y;
-		// point->x = player->decision.bottom.x;
-		// ft_putstr_fd(">>>> Go down", debug_fd);
 	}
 	else
 	{
-		// ft_putstr_fd("Before decision taking Y :", debug_fd);
-		// ft_putnbr_fd(player->decision.top.y, debug_fd);
-		// ft_putchar_fd('\n', debug_fd);
 		if (player->decision.top.y <= 1)
 			player->priority = DOWN;
 		else
 			player->priority = UP;
-		// ft_putstr_fd("Y current (UP) : ", debug_fd);
-		// ft_putnbr_fd(player->decision.top.y, debug_fd);
-		// ft_putchar_fd('\n', debug_fd);
-		// ft_putstr_fd("Priority now : ", debug_fd);
-		// ft_putnbr_fd(player->priority, debug_fd);
-		// ft_putchar_fd('\n', debug_fd);
-		// point->y = player->decision.top.y;
-		// point->x = player->decision.top.x;
-		// ft_putstr_fd(">>>> Go up", debug_fd);
 	}
 	if (player->decision.right.x < player->enemy.left.x)
-	{
 		player->second_priority = RIGHT;
-		// ft_putendl_fd(" > go right", debug_fd);
-	}
 	else
-	{
 		player->second_priority = LEFT;
-		// ft_putendl_fd(" > go left", debug_fd);
-	}
 	if (player->priority == UP)
 		point->y = player->decision.top.y;
 	else if (player->priority == DOWN)

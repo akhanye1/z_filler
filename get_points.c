@@ -114,27 +114,27 @@ void get_all_enemy_pieces(int debug_fd, t_player *player)
         x = -1;
     }
 
-    ft_putendl_fd("SUMMARY (ENEMY)", debug_fd);
-    ft_putstr_fd("Top : ", debug_fd);
-    ft_putnbr_fd(player->enemy.top.y, debug_fd);
-    ft_putchar_fd(' ', debug_fd);
-    ft_putnbr_fd(player->enemy.top.x, debug_fd);
-    ft_putchar_fd('\n', debug_fd);
-    ft_putstr_fd("Right : ", debug_fd);
-    ft_putnbr_fd(player->enemy.right.y, debug_fd);
-    ft_putchar_fd(' ', debug_fd);
-    ft_putnbr_fd(player->enemy.right.x, debug_fd);
-    ft_putchar_fd('\n', debug_fd);
-    ft_putstr_fd("LEFT : ", debug_fd);
-    ft_putnbr_fd(player->enemy.left.y, debug_fd);
-    ft_putchar_fd(' ', debug_fd);
-    ft_putnbr_fd(player->enemy.left.x, debug_fd);
-    ft_putchar_fd('\n', debug_fd);
-    ft_putstr_fd("Bottom : ", debug_fd);
-    ft_putnbr_fd(player->enemy.bottom.y, debug_fd);
-    ft_putchar_fd(' ', debug_fd);
-    ft_putnbr_fd(player->enemy.bottom.x, debug_fd);
-    ft_putchar_fd('\n', debug_fd);
+    // ft_putendl_fd("SUMMARY (ENEMY)", debug_fd);
+    // ft_putstr_fd("Top : ", debug_fd);
+    // ft_putnbr_fd(player->enemy.top.y, debug_fd);
+    // ft_putchar_fd(' ', debug_fd);
+    // ft_putnbr_fd(player->enemy.top.x, debug_fd);
+    // ft_putchar_fd('\n', debug_fd);
+    // ft_putstr_fd("Right : ", debug_fd);
+    // ft_putnbr_fd(player->enemy.right.y, debug_fd);
+    // ft_putchar_fd(' ', debug_fd);
+    // ft_putnbr_fd(player->enemy.right.x, debug_fd);
+    // ft_putchar_fd('\n', debug_fd);
+    // ft_putstr_fd("LEFT : ", debug_fd);
+    // ft_putnbr_fd(player->enemy.left.y, debug_fd);
+    // ft_putchar_fd(' ', debug_fd);
+    // ft_putnbr_fd(player->enemy.left.x, debug_fd);
+    // ft_putchar_fd('\n', debug_fd);
+    // ft_putstr_fd("Bottom : ", debug_fd);
+    // ft_putnbr_fd(player->enemy.bottom.y, debug_fd);
+    // ft_putchar_fd(' ', debug_fd);
+    // ft_putnbr_fd(player->enemy.bottom.x, debug_fd);
+    // ft_putchar_fd('\n', debug_fd);
 }
 
 void get_player_pieces(int debug_fd, t_player *player)
@@ -234,25 +234,25 @@ void get_player_pieces(int debug_fd, t_player *player)
             y = player->decision.bottom.y;
         x = -1;
     }
-    ft_putendl_fd("SUMMARY (PLAYER)", debug_fd);
-    ft_putstr_fd("Top : ", debug_fd);
-    ft_putnbr_fd(player->decision.top.y, debug_fd);
-    ft_putchar_fd(' ', debug_fd);
-    ft_putnbr_fd(player->decision.top.x, debug_fd);
-    ft_putchar_fd('\n', debug_fd);
-    ft_putstr_fd("Right : ", debug_fd);
-    ft_putnbr_fd(player->decision.right.y, debug_fd);
-    ft_putchar_fd(' ', debug_fd);
-    ft_putnbr_fd(player->decision.right.x, debug_fd);
-    ft_putchar_fd('\n', debug_fd);
-    ft_putstr_fd("LEFT : ", debug_fd);
-    ft_putnbr_fd(player->decision.left.y, debug_fd);
-    ft_putchar_fd(' ', debug_fd);
-    ft_putnbr_fd(player->decision.left.x, debug_fd);
-    ft_putchar_fd('\n', debug_fd);
-    ft_putstr_fd("Bottom : ", debug_fd);
-    ft_putnbr_fd(player->decision.bottom.y, debug_fd);
-    ft_putchar_fd(' ', debug_fd);
-    ft_putnbr_fd(player->decision.bottom.x, debug_fd);
-    ft_putchar_fd('\n', debug_fd);
+    // ft_putendl_fd("SUMMARY (PLAYER)", debug_fd);
+    // ft_putstr_fd("Top : ", debug_fd);
+    // ft_putnbr_fd(player->decision.top.y, debug_fd);
+    // ft_putchar_fd(' ', debug_fd);
+    // ft_putnbr_fd(player->decision.top.x, debug_fd);
+    // ft_putchar_fd('\n', debug_fd);
+    // ft_putstr_fd("Right : ", debug_fd);
+    // ft_putnbr_fd(player->decision.right.y, debug_fd);
+    // ft_putchar_fd(' ', debug_fd);
+    // ft_putnbr_fd(player->decision.right.x, debug_fd);
+    // ft_putchar_fd('\n', debug_fd);
+    // ft_putstr_fd("LEFT : ", debug_fd);
+    // ft_putnbr_fd(player->decision.left.y, debug_fd);
+    // ft_putchar_fd(' ', debug_fd);
+    // ft_putnbr_fd(player->decision.left.x, debug_fd);
+    // ft_putchar_fd('\n', debug_fd);
+    // ft_putstr_fd("Bottom : ", debug_fd);
+    // ft_putnbr_fd(player->decision.bottom.y, debug_fd);
+    // ft_putchar_fd(' ', debug_fd);
+    // ft_putnbr_fd(player->decision.bottom.x, debug_fd);
+    // ft_putchar_fd('\n', debug_fd);
 }

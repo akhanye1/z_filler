@@ -40,6 +40,11 @@ char	    place_piece_right_up(t_player *player, t_point *pp, int debug_fd)
 	x = -1;
 	y = -1;
 	startX = pp->x;
+	ft_putstr_fd("Starting Point : ", debug_fd);
+	ft_putnbr_fd(startX, debug_fd);
+	ft_putchar_fd(' ', debug_fd);
+	ft_putnbr_fd(pp->y, debug_fd);
+	ft_putchar_fd('\n', debug_fd);
 	ps.x = 0;
 	ps.y = 0;
 	overlap = 0;
@@ -103,7 +108,7 @@ char	    place_piece_right_up(t_player *player, t_point *pp, int debug_fd)
 		}
 	}
 	if (overlap == 1)
-		return (((pp->y + player->piece_height) <= player->p_height) &&
+		return (((pp->y + player->piece_true_height) <= player->p_height) &&
 			(pp->x + player->piece_width) <= player->p_width);
 	return (FALSE);
 }
@@ -132,24 +137,72 @@ char	    place_piece_left_bottom(t_player *player, t_point *pp, int debug_fd)
 	return (place_piece_right_up(player, pp, debug_fd));
 }
 
+int			get_right_place(t_player *player, t_point *point)
+{
+	int	x;
+	int y;
+	int	direction;
+
+	x = point->x;
+	y = point->y;
+	direction = player->second_priority;
+	while ((x < player->p_width &&
+		ft_toupper(player->plateau_piece[y][x]) == player->piece_large && direction == RIGHT) || 
+		(x > 0 && ft_toupper(player->plateau_piece[y][x]) == player->piece_large && direction == LEFT))
+	{
+		x = (direction == RIGHT) ? x + 1 : x - 1;	
+	}
+	x = (direction == RIGHT) ? x - 1 : x + 1;
+	return (x);
+}
+
 char	    place_piece(t_player *player, t_point *point, int debug_fd)
 {
+	int		num;
+	char	placed;
+	t_point	o_point;
+
+	o_point.x = point->x;
+	o_point.y = point->y;
 	ft_putstr_fd("Priority : ", debug_fd);
 	ft_putstr_fd((player->priority == DOWN) ? "DOWN" : "UP", debug_fd);
 	ft_putstr_fd(" | Second Priority : ", debug_fd);
 	ft_putstr_fd((player->second_priority == LEFT) ? "LEFT" : "RIGHT", debug_fd);
 	ft_putendl_fd((player->closed) ? " - closed" : " - Not closed", debug_fd);
-	if (player->priority == DOWN && player->second_priority == RIGHT && !(player->closed))
-		return (place_piece_right_up(player, point, debug_fd));
-	else if (player->priority == DOWN && player->second_priority == LEFT && !(player->closed))
-		return (place_piece_left_up(player, point, debug_fd));
-	else if (player->priority == UP && player->second_priority == RIGHT && !(player->closed))
-		return (place_piece_right_bottom(player, point, debug_fd));
-	else if (player->priority == UP && player->second_priority == LEFT && !(player->closed))
-		return (place_piece_left_bottom(player, point, debug_fd));
-	else
-		// return (place_piece_right_up(player, point, debug_fd));
-		return (FALSE);
+	num = 0;
+	while (num < 2)
+	{
+		if (player->priority == DOWN && player->second_priority == RIGHT && !(player->closed))
+			placed = place_piece_right_up(player, point, debug_fd);
+		else if (player->priority == DOWN && player->second_priority == LEFT && !(player->closed))
+			placed = place_piece_left_up(player, point, debug_fd);
+		else if (player->priority == UP && player->second_priority == RIGHT && !(player->closed))
+			placed = place_piece_right_bottom(player, point, debug_fd);
+		else if (player->priority == UP && player->second_priority == LEFT && !(player->closed))
+			placed = place_piece_left_bottom(player, point, debug_fd);
+		else
+			// return (place_piece_right_up(player, point, debug_fd));
+			placed = FALSE;
+		if (!placed)
+		{
+			num++;
+			ft_putendl_fd("\n>>> CHANGING <<<", debug_fd);
+			player->second_priority = (player->second_priority == LEFT) ? RIGHT : LEFT;
+			point->x = o_point.x;
+			point->y = o_point.y;
+			point->x = get_right_place(player, point);
+			ft_putstr_fd("Priority : ", debug_fd);
+			ft_putstr_fd((player->priority == DOWN) ? "DOWN" : "UP", debug_fd);
+			ft_putstr_fd(" | Second Priority : ", debug_fd);
+			ft_putstr_fd((player->second_priority == LEFT) ? "LEFT" : "RIGHT", debug_fd);
+			ft_putendl_fd((player->closed) ? " - closed" : " - Not closed", debug_fd);
+		}
+		if (placed)
+			return (TRUE);
+	}
+	if (num > 1)
+		player->second_priority = (player->second_priority == LEFT) ? RIGHT : LEFT;
+	return (num < 2);
 }
 
 char	    close_place_piece(t_player *player, t_point *point, int debug_fd)

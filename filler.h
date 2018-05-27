@@ -54,6 +54,7 @@ typedef struct	s_player
 	int			p_width;
 	int			piece_height;
 	int			piece_width;
+	int			piece_true_height;
 	int			done_reading;
 	char		**plateau_piece;
 	char		**piece_piece;

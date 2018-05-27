@@ -49,9 +49,12 @@ void	fill_piece(t_player *player, int debug_fd)
 	temp = (char**)malloc(sizeof(char*) * ((player->piece_height) + 1));
 	temp[player->piece_height - 1] = NULL;
 	iter = player->piece_memory;
+	player->piece_true_height = 0;
 	while (iter)
 	{
 		temp[i++] = ft_strdup(iter->line);
+		if (ft_strchr(iter->line, '*'))
+			player->piece_true_height++;
 		fr = iter;
 		iter = iter->next;
 		free(fr->line);

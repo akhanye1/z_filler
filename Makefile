@@ -13,7 +13,7 @@
 NAME = filler
 
 SRC = get_piece.c get_plateau.c main.c player_info.c play_piece.c libft/libft.a \
-		free_mem.c fitting.c fill_piece.c get_points.c close_plateau.c
+		free_mem.c fitting.c fill_piece.c get_points.c close_plateau.c advantage.c
 
 HEADER = libft.h
 

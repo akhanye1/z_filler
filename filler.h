@@ -81,4 +81,8 @@ void			get_player_pieces(int debug_fd, t_player *player);
 void    		close_plateau(t_player *player, t_point *point, int debug_fd);
 void			print_piece(int y, int x);
 char	    	close_place_piece(t_player *player, t_point *point, int debug_fd);
+void			get_precise_up(t_player *player, t_point *point, int debug_fd);
+void			get_advantage(int debug_fd, t_player *player, t_point *point);
+int				get_right_piece(t_player *player, int y, int x, int debug_fd);
+int				get_left_piece(t_player *player, int y, int x, int debug_fd);
 #endif

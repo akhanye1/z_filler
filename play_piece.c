@@ -55,9 +55,6 @@ void	get_advantage(int debug_fd, t_player *player, t_point *point)
 		return ;
 	if (player->decision.bottom.y < player->enemy.top.y)
 	{
-		ft_putstr_fd("Bottom height : ", debug_fd);
-		ft_putnbr_fd(player->p_height - 1, debug_fd);
-		ft_putchar_fd('\n', debug_fd);
 		if (player->decision.bottom.y >= (player->p_height - 1))
 			player->priority = UP;
 		else
@@ -156,7 +153,15 @@ void	get_precise_piece(t_player *player, int debug_fd, t_point *point)
 	}
 }
 
-
+void	repeat_play(t_player *player, t_point *point, int debug_fd)
+{
+	get_advantage(debug_fd, player, point);
+	get_precise_piece(player, debug_fd, point);
+	if (place_piece(player, point, debug_fd))
+		print_piece(point->y - 1, point->x);
+	else
+		close_plateau(player, point, debug_fd);
+}
 
 void	play_piece(t_player *player, int debug_fd, t_point *spoint)
 {
@@ -175,23 +180,18 @@ void	play_piece(t_player *player, int debug_fd, t_point *spoint)
 			ft_putendl("0 0");
 			exit(1);
 		}
-		get_advantage(debug_fd, player, &point);
-		get_precise_piece(player, debug_fd, &point);
-		if (place_piece(player, &point, debug_fd))
-			print_piece(point.y - 1, point.x);
-		else
-			close_plateau(player, &point, debug_fd);
+		// get_advantage(debug_fd, player, &point);
+		// get_precise_piece(player, debug_fd, &point);
+		// if (place_piece(player, &point, debug_fd))
+		// 	print_piece(point.y - 1, point.x);
+		// else
+		// 	close_plateau(player, &point, debug_fd);
 	}
 	else
 	{
 		get_all_enemy_pieces(debug_fd, player);
 		get_player_pieces(debug_fd, player);
-		get_advantage(debug_fd, player, &point);
-		get_precise_piece(player, debug_fd, &point);
-		if (place_piece(player, &point, debug_fd))
-			print_piece(point.y - 1, point.x);
-		else
-			close_plateau(player, &point, debug_fd);
+		repeat_play(player, &point, debug_fd);
 	}
 	free_memory(player, debug_fd);
 	player->done_reading = 0;

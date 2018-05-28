@@ -78,6 +78,11 @@ char	    place_piece_right_up(t_player *player, t_point *pp, int debug_fd)
 				ft_putnbr_fd(overlap, debug_fd);
 				ft_putstr_fd(">  ", debug_fd);
 			}
+			if (x != player->piece_width)
+			{
+				overlap = 2; //Forcing it to exit and try again.
+				ft_putendl_fd("Exiting premetualy", debug_fd);
+			}
 			x = -1;
 			ft_putchar_fd('\n', debug_fd);
 		}

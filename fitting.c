@@ -145,6 +145,19 @@ void		change_side(t_player *player, t_point *point, t_point *o_point)
 	point->x = get_right_place(player, point);
 }
 
+char		piece_placed(t_player *player, t_point *point, int debug_fd)
+{
+	if (player->priority == DOWN && player->second_priority == RIGHT && !(player->closed))
+		return (place_piece_right_up(player, point, debug_fd));
+	else if (player->priority == DOWN && player->second_priority == LEFT && !(player->closed))
+		return (place_piece_left_up(player, point, debug_fd));
+	else if (player->priority == UP && player->second_priority == RIGHT && !(player->closed))
+		return (place_piece_right_bottom(player, point, debug_fd));
+	else if (player->priority == UP && player->second_priority == LEFT && !(player->closed))
+		return (place_piece_left_bottom(player, point, debug_fd));
+	return (FALSE);
+}
+
 char	    place_piece(t_player *player, t_point *point, int debug_fd)
 {
 	int		num;
@@ -156,16 +169,7 @@ char	    place_piece(t_player *player, t_point *point, int debug_fd)
 	num = 0;
 	while (num < 2)
 	{
-		placed = FALSE;
-		if (player->priority == DOWN && player->second_priority == RIGHT && !(player->closed))
-			placed = place_piece_right_up(player, point, debug_fd);
-		else if (player->priority == DOWN && player->second_priority == LEFT && !(player->closed))
-			placed = place_piece_left_up(player, point, debug_fd);
-		else if (player->priority == UP && player->second_priority == RIGHT && !(player->closed))
-			placed = place_piece_right_bottom(player, point, debug_fd);
-		else if (player->priority == UP && player->second_priority == LEFT && !(player->closed))
-			placed = place_piece_left_bottom(player, point, debug_fd);
-		if (!placed)
+		if (!(placed = piece_placed(player, point, debug_fd)))
 		{
 			num++;
 			change_side(player, point, &o_point);			

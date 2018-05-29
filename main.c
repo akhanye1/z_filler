@@ -6,13 +6,13 @@
 /*   By: zphakath <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/10 15:42:56 by zphakath          #+#    #+#             */
-/*   Updated: 2018/04/14 13:44:49 by zphakath         ###   ########.fr       */
+/*   Updated: 2018/05/29 17:21:59 by zphakath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-static void	init_player(t_player *player)
+static	void	init_player(t_player *player)
 {
 	player->number = 0;
 	player->p_height = 0;
@@ -27,16 +27,16 @@ static void	init_player(t_player *player)
 	player->closed = FALSE;
 }
 
-int	main()
+int				main(void)
 {
-	char	*line;
-	char	*filename;
-	char	*filename2;
-	int		fd;
-	int		rd;
+	char		*line;
+	char		*filename;
+	char		*filename2;
+	int			fd;
+	int			rd;
 	t_player	*player;
 	t_point		spoint;
-	int		fd_debug;
+	int			fd_debug;
 
 	rd = 0;
 	filename = "debug.txt";
@@ -70,5 +70,4 @@ int	main()
 	close(fd);
 	close(fd_debug);
 	return (0);
-
 }

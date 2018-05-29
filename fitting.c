@@ -6,36 +6,36 @@
 /*   By: zphakath <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 12:10:50 by zphakath          #+#    #+#             */
-/*   Updated: 2018/04/22 13:03:30 by zphakath         ###   ########.fr       */
+/*   Updated: 2018/05/29 17:32:25 by zphakath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-static char	no_enemy_piece(int x, int y, t_player *player, int debug_fd, char pieceat)
+static	char	no_enemy_piece(int x, int y, t_player *player, int debug_fd, char pieceat)
 {
 	char	found_valid_piece;
 
 	found_valid_piece = (player->plateau_piece[y][x] == '.' ||
-		player->plateau_piece[y][x] == player->piece_small ||
-		player->plateau_piece[y][x] == player->piece_large);
+			player->plateau_piece[y][x] == player->piece_small ||
+			player->plateau_piece[y][x] == player->piece_large);
 	found_valid_piece = (!found_valid_piece) ? (pieceat == '.') : found_valid_piece;
 	return (found_valid_piece);
 }
 
-static char	piece_overlap(int x, int y, t_player *player, int debug_fd, char pieceat)
+static	char	piece_overlap(int x, int y, t_player *player, int debug_fd, char pieceat)
 {
 	return ((player->plateau_piece[y][x] == player->piece_small ||
-	player->plateau_piece[y][x] == player->piece_large) && pieceat == '*');
+				player->plateau_piece[y][x] == player->piece_large) && pieceat == '*');
 }
 
-char	    place_piece_right_up(t_player *player, t_point *pp, int debug_fd)
+char			place_piece_right_up(t_player *player, t_point *pp, int debug_fd)
 {
-	int	x;
-	int	y;
+	int		x;
+	int		y;
 	t_point	ps;
-	int	overlap;
-	int	startX;
+	int		overlap;
+	int		startX;
 
 	x = -1;
 	y = -1;
@@ -46,14 +46,14 @@ char	    place_piece_right_up(t_player *player, t_point *pp, int debug_fd)
 	while (ps.y < player->piece_height && overlap != 1)
 	{
 		while (++y < player->piece_height && ((y + pp->y) < player->p_height) &&
-			((y + pp->y) > 0) && overlap < 2)
+				((y + pp->y) > 0) && overlap < 2)
 		{
 			while (++x < player->piece_width && ((x + pp->x) >= 0) && ((x + pp->x) < player->p_width) &&
-				((x + pp->x) >= 0) && no_enemy_piece(x + pp->x, y + pp->y, player, debug_fd, player->piece_piece[y][x]) &&
-				overlap < 2)
+					((x + pp->x) >= 0) && no_enemy_piece(x + pp->x, y + pp->y, player, debug_fd, player->piece_piece[y][x]) &&
+					overlap < 2)
 			{
 				if (piece_overlap(x + pp->x, y + pp->y, player, debug_fd, player->piece_piece[y][x]) &&
-					overlap < 2)
+						overlap < 2)
 					overlap++;
 			}
 			if (x != player->piece_width)
@@ -88,11 +88,11 @@ char	    place_piece_right_up(t_player *player, t_point *pp, int debug_fd)
 	}
 	if (overlap == 1)
 		return (((pp->y + player->piece_true_height) <= player->p_height) &&
-			(pp->x + player->piece_width) <= player->p_width);
+				(pp->x + player->piece_width) <= player->p_width);
 	return (FALSE);
 }
 
-char	    place_piece_left_up(t_player *player, t_point *pp, int debug_fd)
+char			 place_piece_left_up(t_player *player, t_point *pp, int debug_fd)
 {
 	pp->x = (pp->x - player->piece_width) + 1;
 	ft_putstr_fd("Left X : ", debug_fd);
@@ -103,20 +103,20 @@ char	    place_piece_left_up(t_player *player, t_point *pp, int debug_fd)
 	return (place_piece_right_up(player, pp, debug_fd));
 }
 
-char	    place_piece_right_bottom(t_player *player, t_point *pp, int debug_fd)
+char			place_piece_right_bottom(t_player *player, t_point *pp, int debug_fd)
 {
 	pp->y = (pp->y - player->piece_height) + 1;
 	return (place_piece_right_up(player, pp, debug_fd));
 }
 
-char	    place_piece_left_bottom(t_player *player, t_point *pp, int debug_fd)
+char			place_piece_left_bottom(t_player *player, t_point *pp, int debug_fd)
 {
 	pp->y = (pp->y - player->piece_height) + 1;
 	pp->x = (pp->x - player->piece_width) + 1;
 	return (place_piece_right_up(player, pp, debug_fd));
 }
 
-int			get_right_place(t_player *player, t_point *point)
+int				get_right_place(t_player *player, t_point *point)
 {
 	int	x;
 	int y;
@@ -126,18 +126,18 @@ int			get_right_place(t_player *player, t_point *point)
 	y = point->y;
 	direction = player->second_priority;
 	while ((x < player->p_width &&
-		(player->plateau_piece[y][x] == player->piece_large ||
-		player->plateau_piece[y][x] == player->piece_small) && direction == RIGHT) || 
-		(x > 0 && (player->plateau_piece[y][x] == player->piece_large ||
-		player->plateau_piece[y][x] == player->piece_large) && direction == LEFT))
+				(player->plateau_piece[y][x] == player->piece_large ||
+				 player->plateau_piece[y][x] == player->piece_small) && direction == RIGHT) || 
+			(x > 0 && (player->plateau_piece[y][x] == player->piece_large ||
+					   player->plateau_piece[y][x] == player->piece_large) && direction == LEFT))
 	{
-		x = (direction == RIGHT) ? x + 1 : x - 1;	
+		x = (direction == RIGHT) ? x + 1 : x - 1;
 	}
 	x = (direction == RIGHT) ? x - 1 : x + 1;
 	return (x);
 }
 
-void		change_side(t_player *player, t_point *point, t_point *o_point)
+void			change_side(t_player *player, t_point *point, t_point *o_point)
 {
 	player->second_priority = (player->second_priority == LEFT) ? RIGHT : LEFT;
 	point->x = o_point->x;
@@ -145,7 +145,7 @@ void		change_side(t_player *player, t_point *point, t_point *o_point)
 	point->x = get_right_place(player, point);
 }
 
-char		piece_placed(t_player *player, t_point *point, int debug_fd)
+char			piece_placed(t_player *player, t_point *point, int debug_fd)
 {
 	if (player->priority == DOWN && player->second_priority == RIGHT && !(player->closed))
 		return (place_piece_right_up(player, point, debug_fd));
@@ -158,7 +158,7 @@ char		piece_placed(t_player *player, t_point *point, int debug_fd)
 	return (FALSE);
 }
 
-char	    place_piece(t_player *player, t_point *point, int debug_fd)
+char			place_piece(t_player *player, t_point *point, int debug_fd)
 {
 	int		num;
 	char	placed;
@@ -172,7 +172,7 @@ char	    place_piece(t_player *player, t_point *point, int debug_fd)
 		if (!(placed = piece_placed(player, point, debug_fd)))
 		{
 			num++;
-			change_side(player, point, &o_point);			
+			change_side(player, point, &o_point);
 		}
 		if (placed)
 			return (TRUE);
@@ -182,7 +182,7 @@ char	    place_piece(t_player *player, t_point *point, int debug_fd)
 	return (num < 2);
 }
 
-char	    close_place_piece(t_player *player, t_point *point, int debug_fd)
+char			close_place_piece(t_player *player, t_point *point, int debug_fd)
 {
 	ft_putstr_fd("Priority : ", debug_fd);
 	ft_putstr_fd((player->priority == DOWN) ? "DOWN" : "UP", debug_fd);

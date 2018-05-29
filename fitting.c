@@ -78,6 +78,11 @@ char	    place_piece_right_up(t_player *player, t_point *pp, int debug_fd)
 				ft_putnbr_fd(overlap, debug_fd);
 				ft_putstr_fd(">  ", debug_fd);
 			}
+			if (x != player->piece_width)
+			{
+				overlap = 2; //Forcing it to exit and try again.
+				ft_putendl_fd("Exiting premetualy", debug_fd);
+			}
 			x = -1;
 			ft_putchar_fd('\n', debug_fd);
 		}
@@ -147,8 +152,10 @@ int			get_right_place(t_player *player, t_point *point)
 	y = point->y;
 	direction = player->second_priority;
 	while ((x < player->p_width &&
-		ft_toupper(player->plateau_piece[y][x]) == player->piece_large && direction == RIGHT) || 
-		(x > 0 && ft_toupper(player->plateau_piece[y][x]) == player->piece_large && direction == LEFT))
+		(player->plateau_piece[y][x] == player->piece_large ||
+		player->plateau_piece[y][x] == player->piece_small) && direction == RIGHT) || 
+		(x > 0 && (player->plateau_piece[y][x] == player->piece_large ||
+		player->plateau_piece[y][x] == player->piece_large) && direction == LEFT))
 	{
 		x = (direction == RIGHT) ? x + 1 : x - 1;	
 	}

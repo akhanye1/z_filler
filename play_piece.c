@@ -12,6 +12,18 @@
 
 #include "filler.h"
 
+static void	set_enemy_position(t_player *player, int y, int x)
+{
+	player->enemy.top.x = x;
+	player->enemy.top.y = y;
+	player->enemy.right.x = x;
+	player->enemy.right.y = y;
+	player->enemy.left.x = x;
+	player->enemy.left.y = y;
+	player->enemy.bottom.x = x;
+	player->enemy.bottom.y = y;
+}
+
 static char	scan_enemy_pieces(int debug_fd, t_player *player)
 {
 	int		plat_height;
@@ -27,19 +39,11 @@ static char	scan_enemy_pieces(int debug_fd, t_player *player)
 		x = 0;
 		while (x < player->p_width && !piece_found)
 		{
-			if (player->plateau_piece[y][x] != player->piece_small &&
-				player->plateau_piece[y][x] != player->piece_large &&
+			if (player->plateau_piece[y][x] != player->piece_large &&
 				player->plateau_piece[y][x] != '.')
 			{
-				player->enemy.top.x = x;
-				player->enemy.top.y = y;
-				player->enemy.right.x = x;
-				player->enemy.right.y = y;
-				player->enemy.left.x = x;
-				player->enemy.left.y = y;
-				player->enemy.bottom.x = x;
-				player->enemy.bottom.y = y;
-				get_all_enemy_pieces(debug_fd, player);
+				set_enemy_position(player, y, x);
+				get_pieces(debug_fd, player);
 				piece_found = TRUE;
 			}
 			x++;
@@ -111,12 +115,8 @@ void	play_piece(t_player *player, int debug_fd, t_point *spoint)
 	}
 	else
 	{
-		get_all_enemy_pieces(debug_fd, player);
-		get_player_pieces(debug_fd, player);
+		get_pieces(debug_fd, player);
 		repeat_play(player, &point, debug_fd);
 	}
 	free_memory(player, debug_fd);
-	player->done_reading = 0;
-	player->p_countdown = 0;
-	player->piece_countdown = 0;
 }

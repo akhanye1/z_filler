@@ -53,7 +53,6 @@ void		add_line(t_line **head, char *line)
 
 char		get_plateau(char *line, t_player *player, int debug_fd)
 {
-
 	if (player->p_height == 0 && ft_strstr(line, "Plateau"))
 	{
 		player->p_height = get_height(line);

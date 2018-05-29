@@ -31,8 +31,5 @@ char	get_player_info(char *line, t_player *player, int debug_fd)
 		player->piece_large = 'X';
 		player->piece_small = 'x';
 	}
-	ft_putstr_fd("Player Piece : ", debug_fd);
-	ft_putchar_fd(player->piece_large, debug_fd);
-	ft_putchar_fd('\n', debug_fd);
 	return (1);
 }

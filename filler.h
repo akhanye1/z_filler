@@ -12,12 +12,12 @@
 
 #ifndef FILLER_H
 # define FILLER_H
+# include "libft/libft.h"
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include "libft/libft.h"
 
 enum { RIGHT, LEFT, UP, DOWN};
 enum { FALSE, TRUE };

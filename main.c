@@ -27,6 +27,14 @@ static	void	init_player(t_player *player)
 	player->closed = FALSE;
 }
 
+void			print_piece(int y, int x)
+{
+	ft_putnbr(y);
+	ft_putchar(' ');
+	ft_putnbr(x);
+	ft_putchar('\n');
+}
+
 int				main(void)
 {
 	char		*line;

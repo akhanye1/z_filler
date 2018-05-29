@@ -53,14 +53,6 @@ static	char	scan_enemy_pieces(int debug_fd, t_player *player)
 	return (piece_found);
 }
 
-void			print_piece(int y, int x)
-{
-	ft_putnbr(y);
-	ft_putchar(' ');
-	ft_putnbr(x);
-	ft_putchar('\n');
-}
-
 void			get_precise_piece(t_player *player, int debug_fd, t_point *point)
 {
 	if (player->priority == DOWN)

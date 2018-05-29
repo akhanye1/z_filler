@@ -12,6 +12,17 @@
 
 #include "filler.h"
 
+static	void	set_piece_found(t_point *point, char piece_found, int y, int x)
+{
+	if (piece_found)
+	{
+		point->y = y;
+		point->x = x;
+	}
+	else
+		point->x = -1;
+}
+
 static	void	find_right(t_player *player, int dir, t_point *point, int debug_fd)
 {
 	int		y;
@@ -20,8 +31,7 @@ static	void	find_right(t_player *player, int dir, t_point *point, int debug_fd)
 
 	y = point->y;
 	x = player->p_width;
-	if (player->plateau_piece[y][x] == player->piece_small ||
-			player->plateau_piece[y][x] == player->piece_small)
+	if (player->plateau_piece[y][x] == player->piece_large)
 	{
 		point->x = -1;
 		return ;
@@ -30,25 +40,15 @@ static	void	find_right(t_player *player, int dir, t_point *point, int debug_fd)
 	while (x > 0 && ((y < (player->p_height - 1) && dir == UP) ||
 				(y > 0 && dir == DOWN)) && !piece_found)
 	{
-		ft_putnbr_fd(x, debug_fd);
-		ft_putchar_fd(' ', debug_fd);
 		x--;
 		if (x == 0)
 		{
 			y = (dir == UP) ? y + 1 : y - 1;
 			x = 0;
-			ft_putchar_fd('\n', debug_fd);
 		}
-		piece_found = (player->plateau_piece[y][x] == player->piece_small ||
-				player->plateau_piece[y][x] == player->piece_large);
+		piece_found = (player->plateau_piece[y][x] == player->piece_large);
 	}
-	if (piece_found)
-	{
-		point->y = y;
-		point->x = x;
-	}
-	else
-		point->x = -1;
+	set_piece_found(point, piece_found, y, x);
 }
 
 static	void	find_left(t_player *player, int dir, t_point *point, int debug_fd)
@@ -59,8 +59,7 @@ static	void	find_left(t_player *player, int dir, t_point *point, int debug_fd)
 
 	y = point->y;
 	x = 0;
-	if (player->plateau_piece[y][x] == player->piece_small ||
-			player->plateau_piece[y][x] == player->piece_small)
+	if (player->plateau_piece[y][x] == player->piece_large)
 	{
 		point->x = -1;
 		return ;
@@ -69,26 +68,15 @@ static	void	find_left(t_player *player, int dir, t_point *point, int debug_fd)
 	while (x < player->p_width && ((y < (player->p_height - 1) && dir == UP) ||
 				(y > 0 && dir == DOWN)) && !piece_found)
 	{
-		ft_putnbr_fd(x, debug_fd);
-		ft_putchar_fd(' ', debug_fd);
 		x++;
 		if (x == player->p_width)
 		{
 			y = (dir == UP) ? y + 1 : y - 1;
 			x = 0;
-			ft_putchar_fd('\n', debug_fd);
 		}
-		piece_found = (player->plateau_piece[y][x] == player->piece_small ||
-				player->plateau_piece[y][x] == player->piece_large);
+		piece_found = (player->plateau_piece[y][x] == player->piece_large);
 	}
-	ft_putstr_fd("<<", debug_fd);
-	if (piece_found)
-	{
-		point->y = y;
-		point->x = x;
-	}
-	else
-		point->x = -1;
+	set_piece_found(point, piece_found, y, x);
 }
 
 static	char	find_piece(t_player *player, t_point *point, int up_down, int left_right, int debug_fd)
@@ -118,9 +106,6 @@ static	void	find_spot(t_player *player, t_point *point, int up_down, int debug_f
 				(y > 0 && up_down == DOWN)))
 	{
 		point->y = y;
-		ft_putstr_fd("\nY : ", debug_fd);
-		ft_putnbr_fd(y, debug_fd);
-		ft_putchar_fd('\n', debug_fd);
 		if (find_piece(player, point, up_down, check_side, debug_fd))
 		{
 			y = point->y;
@@ -132,8 +117,6 @@ static	void	find_spot(t_player *player, t_point *point, int up_down, int debug_f
 			else
 				y = (up_down == UP) ? y + 1 : y - 1;
 		}
-		else
-			ft_putendl_fd("Piece not found", debug_fd);
 		if ((y == player->p_height && up_down == UP) ||
 				(y == 0 && up_down == DOWN))
 		{

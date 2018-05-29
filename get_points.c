@@ -12,7 +12,7 @@
 
 #include "filler.h"
 
-static void check_right(t_player *player, int y, int x, t_dcn *p_type)
+static void check_right(t_player *player, int y, int x, t_dcn *p_type, int debug_fd)
 {
     char    piece_found;
 
@@ -21,17 +21,14 @@ static void check_right(t_player *player, int y, int x, t_dcn *p_type)
     {
         while (++y < player->p_height)
         {
-            if ((piece_found = (player->plateau_piece[y][x] != '.' &&
-                          player->plateau_piece[y][x] != player->piece_small &&
-                          player->plateau_piece[y][x] != player->piece_large)))
+            piece_found = (player->plateau_piece[y][x] == player->piece_large);
+            if (piece_found)
             {
                 p_type->right.x = x;
                 p_type->right.y = y;                
                 break;
             }
         }
-        if (piece_found)
-            x = p_type->right.x;
         y = 0;
     }
 }
@@ -45,9 +42,7 @@ static void check_left(t_player *player, int y, int x, t_dcn *p_type)
     {
         while (++y < player->p_height)
         {
-            piece_found = (player->plateau_piece[y][x] != '.' &&
-                          player->plateau_piece[y][x] != player->piece_small &&
-                          player->plateau_piece[y][x] != player->piece_large);
+            piece_found = (player->plateau_piece[y][x] == player->piece_large);
             if (piece_found)
             {
                 p_type->left.x = x;
@@ -55,13 +50,11 @@ static void check_left(t_player *player, int y, int x, t_dcn *p_type)
                 break;
             }
         }
-        if (piece_found)
-            x = p_type->left.x;
         y = 0;
     }
 }
 
-static  void check_up(t_player *player, int y, int x, t_dcn *p_type)
+static  void check_up(t_player *player, int y, int x, t_dcn *p_type, int debug_fd)
 {
     char piece_found;
 
@@ -70,9 +63,7 @@ static  void check_up(t_player *player, int y, int x, t_dcn *p_type)
     {
         while (++x < player->p_width)
         {
-            piece_found = (player->plateau_piece[y][x] != '.' &&
-                          player->plateau_piece[y][x] != player->piece_small &&
-                          player->plateau_piece[y][x] != player->piece_large);
+            piece_found = (player->plateau_piece[y][x] == player->piece_large);
             if (piece_found)
             {
                 p_type->top.x = x;
@@ -80,13 +71,11 @@ static  void check_up(t_player *player, int y, int x, t_dcn *p_type)
                 break ;
             }
         }
-        if (piece_found)
-            y = p_type->top.y;
         x = -1;
     }
 }
 
-static void check_bottom(t_player *player, int y, int x, t_dcn *p_type)
+static void check_bottom(t_player *player, int y, int x, t_dcn *p_type, int debug_fd)
 {
     char    piece_found;
 
@@ -95,9 +84,7 @@ static void check_bottom(t_player *player, int y, int x, t_dcn *p_type)
     {
         while (++x < player->p_width)
         {
-            piece_found = (player->plateau_piece[y][x] != '.' &&
-                          player->plateau_piece[y][x] != player->piece_small &&
-                          player->plateau_piece[y][x] != player->piece_large);
+            piece_found = (player->plateau_piece[y][x] == player->piece_large);
             if (piece_found)
             {
                 p_type->bottom.x = x;
@@ -105,8 +92,6 @@ static void check_bottom(t_player *player, int y, int x, t_dcn *p_type)
                 break ;
             }
         }
-        if (piece_found)
-            y = p_type->bottom.y;
         x = -1;
     }
 }
@@ -118,22 +103,22 @@ void    get_pieces(int debug_fd, t_player *player)
 
     x = player->enemy.right.x;
     y = 0;
-    check_right(player, y, x, &player->enemy);
+    check_right(player, y, x, &player->enemy, debug_fd);
     x = player->enemy.left.x;
     check_left(player, y, x, &player->enemy);
     y = player->enemy.top.y;
     x = -1;
-    check_up(player, y, x, &player->enemy);
+    check_up(player, y, x, &player->enemy, debug_fd);
     y = player->enemy.bottom.y;
-    check_bottom(player, y, x, &player->enemy);
+    check_bottom(player, y, x, &player->enemy, debug_fd);
     x = player->decision.right.x;
     y = 0;
-    check_right(player, y, x, &player->decision);
+    check_right(player, y, x, &player->decision, debug_fd);
     x = player->decision.left.x;
     check_left(player, y, x, &player->decision);
     y = player->decision.top.y;
     x = -1;
-    check_up(player, y, x, &player->decision);
+    check_up(player, y, x, &player->decision, debug_fd);
     y = player->decision.bottom.y;
-    check_bottom(player, y, x, &player->decision);
+    check_bottom(player, y, x, &player->decision, debug_fd);
 }

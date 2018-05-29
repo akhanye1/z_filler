@@ -69,7 +69,6 @@ void	get_advantage(int debug_fd, t_player *player, t_point *point)
 			player->priority = UP;
 		else
 			player->priority = DOWN;
-		ft_putendl_fd((player->priority == UP) ? "UP" : "DOWN", debug_fd);
 	}
 	else
 	{

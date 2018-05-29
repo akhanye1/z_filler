@@ -6,13 +6,13 @@
 /*   By: zphakath <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/17 13:24:05 by zphakath          #+#    #+#             */
-/*   Updated: 2018/04/22 15:20:41 by zphakath         ###   ########.fr       */
+/*   Updated: 2018/05/29 17:12:07 by zphakath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-static void	set_enemy_position(t_player *player, int y, int x)
+static	void	set_enemy_position(t_player *player, int y, int x)
 {
 	player->enemy.top.x = x;
 	player->enemy.top.y = y;
@@ -24,7 +24,7 @@ static void	set_enemy_position(t_player *player, int y, int x)
 	player->enemy.bottom.y = y;
 }
 
-static char	scan_enemy_pieces(int debug_fd, t_player *player)
+static	char	scan_enemy_pieces(int debug_fd, t_player *player)
 {
 	int		plat_height;
 	int		y;
@@ -40,7 +40,7 @@ static char	scan_enemy_pieces(int debug_fd, t_player *player)
 		while (x < player->p_width && !piece_found)
 		{
 			if (player->plateau_piece[y][x] != player->piece_large &&
-				player->plateau_piece[y][x] != '.')
+					player->plateau_piece[y][x] != '.')
 			{
 				set_enemy_position(player, y, x);
 				get_pieces(debug_fd, player);
@@ -53,7 +53,7 @@ static char	scan_enemy_pieces(int debug_fd, t_player *player)
 	return (piece_found);
 }
 
-void	print_piece(int y, int x)
+void			print_piece(int y, int x)
 {
 	ft_putnbr(y);
 	ft_putchar(' ');
@@ -61,22 +61,22 @@ void	print_piece(int y, int x)
 	ft_putchar('\n');
 }
 
-void	get_precise_piece(t_player *player, int debug_fd, t_point *point)
+void			get_precise_piece(t_player *player, int debug_fd, t_point *point)
 {
 	if (player->priority == DOWN)
 	{
 		if (player->second_priority == RIGHT)
 		{
 			player->decision.bottom.x = get_right_piece(player,
-				player->decision.bottom.y, player->decision.bottom.x,
-				debug_fd);
+					player->decision.bottom.y, player->decision.bottom.x,
+					debug_fd);
 			point->x = player->decision.bottom.x;
 		}
 		else
 		{
 			player->decision.bottom.x = get_left_piece(player,
-				player->decision.bottom.y, player->decision.bottom.x,
-				debug_fd);
+					player->decision.bottom.y, player->decision.bottom.x,
+					debug_fd);
 			point->x = player->decision.bottom.x;
 		}
 	}
@@ -84,7 +84,7 @@ void	get_precise_piece(t_player *player, int debug_fd, t_point *point)
 		get_precise_up(player, point, debug_fd);
 }
 
-void	repeat_play(t_player *player, t_point *point, int debug_fd)
+void			repeat_play(t_player *player, t_point *point, int debug_fd)
 {
 	get_advantage(debug_fd, player, point);
 	get_precise_piece(player, debug_fd, point);
@@ -94,7 +94,7 @@ void	repeat_play(t_player *player, t_point *point, int debug_fd)
 		close_plateau(player, point, debug_fd);
 }
 
-void	play_piece(t_player *player, int debug_fd, t_point *spoint)
+void			play_piece(t_player *player, int debug_fd, t_point *spoint)
 {
 	t_point point;
 
@@ -105,7 +105,7 @@ void	play_piece(t_player *player, int debug_fd, t_point *spoint)
 	if (!player->numPlayed)
 	{
 		if (!scanforplay(debug_fd, player, &point, spoint) ||
-			!scan_enemy_pieces(debug_fd, player))
+				!scan_enemy_pieces(debug_fd, player))
 		{
 			free_memory(player, debug_fd);
 			ft_putendl("0 0");

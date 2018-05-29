@@ -112,11 +112,6 @@ static void find_spot(t_player *player, t_point *point, int up_down, int debug_f
         if (find_piece(player, point, up_down, check_side, debug_fd))
         {
             y = point->y;
-            ft_putstr_fd("Attempting to place piece. Y - X : ", debug_fd);
-            ft_putnbr_fd(point->y, debug_fd);
-            ft_putchar_fd(' ', debug_fd);
-            ft_putnbr_fd(point->x, debug_fd);
-            ft_putchar_fd('\n', debug_fd);
             if (close_place_piece(player, point, debug_fd))
             {
                 print_piece(point->y - 1, point->x);
@@ -130,7 +125,6 @@ static void find_spot(t_player *player, t_point *point, int up_down, int debug_f
         if ((y == player->p_height && up_down == UP) ||
             (y == 0 && up_down == DOWN))
         {
-            ft_putendl_fd("\n\nCHANGE SIDE\n\n", debug_fd);
             y = (up_down == UP) ? 0 : player->p_height - 2;
             check_side = (check_side == LEFT) ? RIGHT : LEFT;
             player->second_priority = check_side;

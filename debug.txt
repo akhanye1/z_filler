@@ -47,7 +47,6 @@ fill : LEFT
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 << X Position : 6
-Attempting to place piece. Y - X : 8 6
 Priority : UP | Second Priority : LEFT - Not closed
 
 >>>>>>>>
@@ -66,7 +65,6 @@ fill : LEFT
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 << X Position : 6
-Attempting to place piece. Y - X : 8 6
 Priority : UP | Second Priority : LEFT - Not closed
 
 >>>>>>>>
@@ -84,7 +82,6 @@ fill : LEFT
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 << X Position : 9
-Attempting to place piece. Y - X : 7 9
 Priority : UP | Second Priority : LEFT - Not closed
 
 >>>>>>>>
@@ -102,7 +99,6 @@ fill : LEFT
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 << X Position : 9
-Attempting to place piece. Y - X : 7 9
 Priority : UP | Second Priority : LEFT - Not closed
 6
 >>>>>>>>
@@ -120,7 +116,6 @@ fill : LEFT
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 << X Position : 9
-Attempting to place piece. Y - X : 7 9
 Priority : UP | Second Priority : LEFT - Not closed
 
 >>>>>>>>
@@ -138,7 +133,6 @@ fill : LEFT
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 << X Position : 9
-Attempting to place piece. Y - X : 7 9
 Priority : UP | Second Priority : LEFT - Not closed
 
 >>>>>>>>
@@ -156,7 +150,6 @@ fill : LEFT
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 << X Position : 8
-Attempting to place piece. Y - X : 7 8
 Priority : UP | Second Priority : LEFT - Not closed
 
 >>>>>>>>
@@ -173,7 +166,6 @@ fill : LEFT
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 << X Position : 8
-Attempting to place piece. Y - X : 6 8
 Priority : UP | Second Priority : LEFT - Not closed
 
 >>>>>>>>
@@ -190,7 +182,6 @@ fill : LEFT
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 << X Position : 7
-Attempting to place piece. Y - X : 6 7
 Priority : UP | Second Priority : LEFT - Not closed
 
 >>>>>>>>
@@ -207,7 +198,6 @@ fill : LEFT
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 << X Position : 6
-Attempting to place piece. Y - X : 6 6
 Priority : UP | Second Priority : LEFT - Not closed
 
 >>>>>>>>
@@ -223,7 +213,6 @@ fill : LEFT
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 << X Position : 6
-Attempting to place piece. Y - X : 5 6
 Priority : UP | Second Priority : LEFT - Not closed
 
 >>>>>>>>
@@ -238,7 +227,6 @@ fill : LEFT
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 << X Position : 3
-Attempting to place piece. Y - X : 11 3
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 3  Bottom : 11
 
@@ -254,7 +242,6 @@ fill : LEFT
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 << X Position : 3
-Attempting to place piece. Y - X : 11 3
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 2  Bottom : 11
 
@@ -270,7 +257,6 @@ fill : LEFT
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 << X Position : 3
-Attempting to place piece. Y - X : 11 3
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 11
 
@@ -286,7 +272,6 @@ fill : LEFT
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 << X Position : 3
-Attempting to place piece. Y - X : 11 3
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 11
 
@@ -301,7 +286,6 @@ fill : LEFT
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 << X Position : 2
-Attempting to place piece. Y - X : 12 2
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 2  Bottom : 12
 
@@ -315,7 +299,6 @@ Y : 14
 fill : LEFT
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 0 1 << X Position : 2
-Attempting to place piece. Y - X : 13 2
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 13
 
@@ -328,7 +311,6 @@ Left X : 0  Bottom : 13
 Y : 14
 fill : LEFT
 0 1 << X Position : 2
-Attempting to place piece. Y - X : 14 2
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 14
 
@@ -341,7 +323,6 @@ Left X : 0  Bottom : 14
 Y : 14
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 14 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 14
 
@@ -372,21 +353,18 @@ Left X : 0  Bottom : 14
 Y : 14
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 14 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 14
 1413
 Y : 13
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 13 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 13
 1312
 Y : 12
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 12 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 12
 12
@@ -423,42 +401,36 @@ Left X : 1  Bottom : 12
 Y : 14
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 14 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 14
 1413
 Y : 13
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 13 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 13
 1312
 Y : 12
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 12 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 12
 1211
 Y : 11
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 11 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 11
 1110
 Y : 10
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 10 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 10
 109
 Y : 9
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 9 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 9
 9
@@ -471,42 +443,36 @@ Left X : 1  Bottom : 9
 Y : 14
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 14 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -1  Bottom : 14
 1413
 Y : 13
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 13 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -1  Bottom : 13
 1312
 Y : 12
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 12 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -1  Bottom : 12
 1211
 Y : 11
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 11 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -1  Bottom : 11
 1110
 Y : 10
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 10 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -1  Bottom : 10
 109
 Y : 9
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 9 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -1  Bottom : 9
 9
@@ -522,49 +488,42 @@ Left X : -1  Bottom : 9
 Y : 14
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 14 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 14
 1413
 Y : 13
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 13 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 13
 1312
 Y : 12
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 12 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 12
 1211
 Y : 11
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 11 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 11
 1110
 Y : 10
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 10 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 10
 109
 Y : 9
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 9 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 9
 98
 Y : 8
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 8 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 8
 8
@@ -580,42 +539,36 @@ Left X : 1  Bottom : 8
 Y : 14
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 14 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 14
 1413
 Y : 13
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 13 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 13
 1312
 Y : 12
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 12 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 12
 1211
 Y : 11
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 11 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 11
 1110
 Y : 10
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 10 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 10
 109
 Y : 9
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 9 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 9
 9
@@ -640,56 +593,48 @@ Left X : 0  Bottom : 9
 Y : 14
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 14 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 14
 1413
 Y : 13
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 13 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 13
 1312
 Y : 12
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 12 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 12
 1211
 Y : 11
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 11 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 11
 1110
 Y : 10
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 10 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 10
 109
 Y : 9
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 9 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 9
 98
 Y : 8
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 8 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 8
 87
 Y : 7
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 7 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 7
 7
@@ -705,63 +650,54 @@ Left X : 0  Bottom : 7
 Y : 14
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 14 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 14
 1413
 Y : 13
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 13 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 13
 1312
 Y : 12
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 12 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 12
 1211
 Y : 11
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 11 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 11
 1110
 Y : 10
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 10 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 10
 109
 Y : 9
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 9 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 9
 98
 Y : 8
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 8 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 8
 87
 Y : 7
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 7 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 7
 76
 Y : 6
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 6 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 6
 6
@@ -774,70 +710,60 @@ Left X : 0  Bottom : 6
 Y : 14
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 14 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -1  Bottom : 14
 1413
 Y : 13
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 13 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -1  Bottom : 13
 1312
 Y : 12
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 12 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -1  Bottom : 12
 1211
 Y : 11
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 11 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -1  Bottom : 11
 1110
 Y : 10
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 10 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -1  Bottom : 10
 109
 Y : 9
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 9 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -1  Bottom : 9
 98
 Y : 8
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 8 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -1  Bottom : 8
 87
 Y : 7
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 7 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -1  Bottom : 7
 76
 Y : 6
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 6 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -1  Bottom : 6
 65
 Y : 5
 fill : LEFT
 0 1 2 3 4 << X Position : 5
-Attempting to place piece. Y - X : 5 5
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 3  Bottom : 5
 5
@@ -850,63 +776,54 @@ Left X : 3  Bottom : 5
 Y : 14
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 14 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 14
 1413
 Y : 13
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 13 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 13
 1312
 Y : 12
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 12 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 12
 1211
 Y : 11
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 11 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 11
 1110
 Y : 10
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 10 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 10
 109
 Y : 9
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 9 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 9
 98
 Y : 8
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 8 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 8
 87
 Y : 7
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 7 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 7
 76
 Y : 6
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 6 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 6
 6
@@ -919,35 +836,30 @@ Left X : 0  Bottom : 6
 Y : 14
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 14 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 14
 141312111098
 Y : 13
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 13 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 13
 13121110987
 Y : 12
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 12 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 12
 1211109876
 Y : 11
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 11 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 11
 111098765
 Y : 10
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 10 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 10
 1098765
@@ -960,70 +872,60 @@ Left X : 0  Bottom : 10
 Y : 14
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 14 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 14
 1413
 Y : 13
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 13 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 13
 1312
 Y : 12
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 12 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 12
 1211
 Y : 11
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 11 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 11
 1110
 Y : 10
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 10 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 10
 109
 Y : 9
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 9 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 9
 98
 Y : 8
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 8 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 8
 87
 Y : 7
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 7 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 7
 76
 Y : 6
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 6 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 6
 65
 Y : 5
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 5 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 5
 5
@@ -1042,84 +944,72 @@ Left X : 1  Bottom : 5
 Y : 14
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 14 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 14
 1413
 Y : 13
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 13 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 13
 1312
 Y : 12
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 12 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 12
 1211
 Y : 11
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 11 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 11
 1110
 Y : 10
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 10 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 10
 109
 Y : 9
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 9 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 9
 98
 Y : 8
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 8 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 8
 87
 Y : 7
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 7 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 7
 76
 Y : 6
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 6 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 6
 65
 Y : 5
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 5 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 5
 54
 Y : 4
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 4 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 4
 43
 Y : 3
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 3 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 0  Bottom : 3
 3
@@ -1141,91 +1031,78 @@ Left X : 0  Bottom : 3
 Y : 14
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 14 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 14
 1413
 Y : 13
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 13 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 13
 1312
 Y : 12
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 12 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 12
 1211
 Y : 11
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 11 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 11
 1110
 Y : 10
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 10 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 10
 109
 Y : 9
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 9 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 9
 98
 Y : 8
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 8 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 8
 87
 Y : 7
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 7 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 7
 76
 Y : 6
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 6 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 6
 65
 Y : 5
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 5 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 5
 54
 Y : 4
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 4 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 4
 43
 Y : 3
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 3 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 3
 32
 Y : 2
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 2 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : 1  Bottom : 2
 2
@@ -1247,195 +1124,157 @@ Left X : 1  Bottom : 2
 Y : 14
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 14 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -13  Bottom : 14
 
 Y : 13
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 13 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -13  Bottom : 13
 131211109
 Y : 12
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 12 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -13  Bottom : 12
 12111098
 Y : 11
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 11 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -13  Bottom : 11
 1110987
 Y : 10
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 10 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -13  Bottom : 10
 109876
 Y : 9
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 9 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -13  Bottom : 9
 98765
 Y : 8
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 8 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -13  Bottom : 8
 87654
 Y : 7
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 7 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -13  Bottom : 7
 76543
 Y : 6
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 6 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -13  Bottom : 6
 65432
 Y : 5
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 5 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -13  Bottom : 5
 54321
 Y : 4
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 4 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -13  Bottom : 4
 43210
 Y : 3
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 3 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -13  Bottom : 3
 3210-1
 Y : 2
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 2 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -13  Bottom : 2
 210-1-2
 Y : 1
 fill : LEFT
 0 << X Position : 1
-Attempting to place piece. Y - X : 1 1
 Priority : DOWN | Second Priority : LEFT - Not closed
 Left X : -13  Bottom : 1
 10-1-2-3
-
-CHANGE SIDE
-
-
-
 Y : 14
 fill : RIGHT
 17 16 15 14 13 12 11 10 9 8 7 6 5  X Position : 4
-Attempting to place piece. Y - X : 14 4
 Priority : DOWN | Second Priority : RIGHT - Not closed
 
 Y : 13
 fill : RIGHT
 17 16 15 14 13 12 11 10 9 8 7 6 5  X Position : 4
-Attempting to place piece. Y - X : 13 4
 Priority : DOWN | Second Priority : RIGHT - Not closed
 131211109
 Y : 12
 fill : RIGHT
 17 16 15 14 13 12 11 10 9 8 7 6 5  X Position : 4
-Attempting to place piece. Y - X : 12 4
 Priority : DOWN | Second Priority : RIGHT - Not closed
 12111098
 Y : 11
 fill : RIGHT
 17 16 15 14 13 12 11 10 9 8 7 6 5  X Position : 4
-Attempting to place piece. Y - X : 11 4
 Priority : DOWN | Second Priority : RIGHT - Not closed
 1110987
 Y : 10
 fill : RIGHT
 17 16 15 14 13 12 11 10 9 8 7 6 5  X Position : 4
-Attempting to place piece. Y - X : 10 4
 Priority : DOWN | Second Priority : RIGHT - Not closed
 109876
 Y : 9
 fill : RIGHT
 17 16 15 14 13 12 11 10 9 8 7  X Position : 6
-Attempting to place piece. Y - X : 9 6
 Priority : DOWN | Second Priority : RIGHT - Not closed
 98765
 Y : 8
 fill : RIGHT
 17 16 15 14 13 12 11  X Position : 10
-Attempting to place piece. Y - X : 8 10
 Priority : DOWN | Second Priority : RIGHT - Not closed
 87654
 Y : 7
 fill : RIGHT
 17 16 15 14  X Position : 13
-Attempting to place piece. Y - X : 7 13
 Priority : DOWN | Second Priority : RIGHT - Not closed
 76543
 Y : 6
 fill : RIGHT
 17 16 15 14 13 12 11 10 9  X Position : 8
-Attempting to place piece. Y - X : 6 8
 Priority : DOWN | Second Priority : RIGHT - Not closed
 65432
 Y : 5
 fill : RIGHT
 17 16 15 14 13 12 11 10 9 8 7  X Position : 6
-Attempting to place piece. Y - X : 5 6
 Priority : DOWN | Second Priority : RIGHT - Not closed
 54321
 Y : 4
 fill : RIGHT
 17 16 15 14 13 12 11 10 9 8 7  X Position : 6
-Attempting to place piece. Y - X : 4 6
 Priority : DOWN | Second Priority : RIGHT - Not closed
 43210
 Y : 3
 fill : RIGHT
 17 16 15 14 13 12 11 10 9 8 7  X Position : 6
-Attempting to place piece. Y - X : 3 6
 Priority : DOWN | Second Priority : RIGHT - Not closed
 3210-1
 Y : 2
 fill : RIGHT
 17 16 15 14 13 12 11 10 9 8 7  X Position : 6
-Attempting to place piece. Y - X : 2 6
 Priority : DOWN | Second Priority : RIGHT - Not closed
 210-1-2
 Y : 1
 fill : RIGHT
 17 16 15 14 13 12 11 10 9 8 7 6  X Position : 5
-Attempting to place piece. Y - X : 1 5
 Priority : DOWN | Second Priority : RIGHT - Not closed
 10-1-2-3
-
-CHANGE SIDE
-
-
-
 >>>>>>>>
 
 0 0

@@ -40,11 +40,6 @@ char	    place_piece_right_up(t_player *player, t_point *pp, int debug_fd)
 	x = -1;
 	y = -1;
 	startX = pp->x;
-	ft_putstr_fd("Starting Point : ", debug_fd);
-	ft_putnbr_fd(startX, debug_fd);
-	ft_putchar_fd(' ', debug_fd);
-	ft_putnbr_fd(pp->y, debug_fd);
-	ft_putchar_fd('\n', debug_fd);
 	ps.x = 0;
 	ps.y = 0;
 	overlap = 0;
@@ -59,32 +54,11 @@ char	    place_piece_right_up(t_player *player, t_point *pp, int debug_fd)
 			{
 				if (piece_overlap(x + pp->x, y + pp->y, player, debug_fd, player->piece_piece[y][x]) &&
 					overlap < 2)
-				{
 					overlap++;
-				}
-				ft_putstr_fd("{[", debug_fd);
-				ft_putchar_fd(player->piece_piece[y][x], debug_fd);
-				ft_putstr_fd("](", debug_fd);
-				ft_putchar_fd(player->plateau_piece[y + pp->y][x + pp->x], debug_fd);
-				ft_putstr_fd(")", debug_fd);
-				ft_putnbr_fd(y, debug_fd);
-				ft_putstr_fd("|", debug_fd);
-				ft_putnbr_fd(y + pp->y, debug_fd);
-				ft_putstr_fd(", ", debug_fd);
-				ft_putnbr_fd(x, debug_fd);
-				ft_putstr_fd("|", debug_fd);
-				ft_putnbr_fd(x + pp->x, debug_fd);
-				ft_putstr_fd("}  <", debug_fd);
-				ft_putnbr_fd(overlap, debug_fd);
-				ft_putstr_fd(">  ", debug_fd);
 			}
 			if (x != player->piece_width)
-			{
 				overlap = 2; //Forcing it to exit and try again.
-				ft_putendl_fd("Exiting premetualy", debug_fd);
-			}
 			x = -1;
-			ft_putchar_fd('\n', debug_fd);
 		}
 		if (overlap != 1)
 		{
@@ -163,6 +137,14 @@ int			get_right_place(t_player *player, t_point *point)
 	return (x);
 }
 
+void		change_side(t_player *player, t_point *point, t_point *o_point)
+{
+	player->second_priority = (player->second_priority == LEFT) ? RIGHT : LEFT;
+	point->x = o_point->x;
+	point->y = o_point->y;
+	point->x = get_right_place(player, point);
+}
+
 char	    place_piece(t_player *player, t_point *point, int debug_fd)
 {
 	int		num;
@@ -171,14 +153,10 @@ char	    place_piece(t_player *player, t_point *point, int debug_fd)
 
 	o_point.x = point->x;
 	o_point.y = point->y;
-	ft_putstr_fd("Priority : ", debug_fd);
-	ft_putstr_fd((player->priority == DOWN) ? "DOWN" : "UP", debug_fd);
-	ft_putstr_fd(" | Second Priority : ", debug_fd);
-	ft_putstr_fd((player->second_priority == LEFT) ? "LEFT" : "RIGHT", debug_fd);
-	ft_putendl_fd((player->closed) ? " - closed" : " - Not closed", debug_fd);
 	num = 0;
 	while (num < 2)
 	{
+		placed = FALSE;
 		if (player->priority == DOWN && player->second_priority == RIGHT && !(player->closed))
 			placed = place_piece_right_up(player, point, debug_fd);
 		else if (player->priority == DOWN && player->second_priority == LEFT && !(player->closed))
@@ -187,22 +165,10 @@ char	    place_piece(t_player *player, t_point *point, int debug_fd)
 			placed = place_piece_right_bottom(player, point, debug_fd);
 		else if (player->priority == UP && player->second_priority == LEFT && !(player->closed))
 			placed = place_piece_left_bottom(player, point, debug_fd);
-		else
-			// return (place_piece_right_up(player, point, debug_fd));
-			placed = FALSE;
 		if (!placed)
 		{
 			num++;
-			ft_putendl_fd("\n>>> CHANGING <<<", debug_fd);
-			player->second_priority = (player->second_priority == LEFT) ? RIGHT : LEFT;
-			point->x = o_point.x;
-			point->y = o_point.y;
-			point->x = get_right_place(player, point);
-			ft_putstr_fd("Priority : ", debug_fd);
-			ft_putstr_fd((player->priority == DOWN) ? "DOWN" : "UP", debug_fd);
-			ft_putstr_fd(" | Second Priority : ", debug_fd);
-			ft_putstr_fd((player->second_priority == LEFT) ? "LEFT" : "RIGHT", debug_fd);
-			ft_putendl_fd((player->closed) ? " - closed" : " - Not closed", debug_fd);
+			change_side(player, point, &o_point);			
 		}
 		if (placed)
 			return (TRUE);

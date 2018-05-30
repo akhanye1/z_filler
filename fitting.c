@@ -6,13 +6,13 @@
 /*   By: zphakath <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 12:10:50 by zphakath          #+#    #+#             */
-/*   Updated: 2018/05/29 17:32:25 by zphakath         ###   ########.fr       */
+/*   Updated: 2018/05/30 17:20:51 by zphakath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-char			 place_piece_left_up(t_player *player, t_point *pp, int debug_fd)
+char	place_piece_left_up(t_player *player, t_point *pp, int debug_fd)
 {
 	pp->x = (pp->x - player->piece_width) + 1;
 	ft_putstr_fd("Left X : ", debug_fd);
@@ -23,20 +23,20 @@ char			 place_piece_left_up(t_player *player, t_point *pp, int debug_fd)
 	return (place_piece_right_up(player, pp, debug_fd));
 }
 
-char			place_piece_right_bottom(t_player *player, t_point *pp, int debug_fd)
+char	place_piece_right_bottom(t_player *player, t_point *pp, int debug_fd)
 {
 	pp->y = (pp->y - player->piece_height) + 1;
 	return (place_piece_right_up(player, pp, debug_fd));
 }
 
-char			place_piece_left_bottom(t_player *player, t_point *pp, int debug_fd)
+char	place_piece_left_bottom(t_player *player, t_point *pp, int debug_fd)
 {
 	pp->y = (pp->y - player->piece_height) + 1;
 	pp->x = (pp->x - player->piece_width) + 1;
 	return (place_piece_right_up(player, pp, debug_fd));
 }
 
-int				get_right_place(t_player *player, t_point *point)
+int		get_right_place(t_player *player, t_point *point)
 {
 	int	x;
 	int y;
@@ -47,9 +47,11 @@ int				get_right_place(t_player *player, t_point *point)
 	direction = player->second_priority;
 	while ((x < player->p_width &&
 				(player->plateau_piece[y][x] == player->piece_large ||
-				 player->plateau_piece[y][x] == player->piece_small) && direction == RIGHT) || 
+				 player->plateau_piece[y][x] == player->piece_small)
+				&& direction == RIGHT) ||
 			(x > 0 && (player->plateau_piece[y][x] == player->piece_large ||
-					   player->plateau_piece[y][x] == player->piece_large) && direction == LEFT))
+					   player->plateau_piece[y][x] == player->piece_large)
+			 && direction == LEFT))
 	{
 		x = (direction == RIGHT) ? x + 1 : x - 1;
 	}
@@ -57,7 +59,7 @@ int				get_right_place(t_player *player, t_point *point)
 	return (x);
 }
 
-void			change_side(t_player *player, t_point *point, t_point *o_point)
+void	change_side(t_player *player, t_point *point, t_point *o_point)
 {
 	player->second_priority = (player->second_priority == LEFT) ? RIGHT : LEFT;
 	point->x = o_point->x;
@@ -65,20 +67,24 @@ void			change_side(t_player *player, t_point *point, t_point *o_point)
 	point->x = get_right_place(player, point);
 }
 
-char			piece_placed(t_player *player, t_point *point, int debug_fd)
+char	piece_placed(t_player *player, t_point *point, int debug_fd)
 {
-	if (player->priority == DOWN && player->second_priority == RIGHT && !(player->closed))
+	if (player->priority == DOWN && player->second_priority == RIGHT
+			&& !(player->closed))
 		return (place_piece_right_up(player, point, debug_fd));
-	else if (player->priority == DOWN && player->second_priority == LEFT && !(player->closed))
+	else if (player->priority == DOWN && player->second_priority == LEFT
+			&& !(player->closed))
 		return (place_piece_left_up(player, point, debug_fd));
-	else if (player->priority == UP && player->second_priority == RIGHT && !(player->closed))
+	else if (player->priority == UP && player->second_priority == RIGHT
+			&& !(player->closed))
 		return (place_piece_right_bottom(player, point, debug_fd));
-	else if (player->priority == UP && player->second_priority == LEFT && !(player->closed))
+	else if (player->priority == UP && player->second_priority == LEFT
+			&& !(player->closed))
 		return (place_piece_left_bottom(player, point, debug_fd));
 	return (FALSE);
 }
 
-char			place_piece(t_player *player, t_point *point, int debug_fd)
+char	place_piece(t_player *player, t_point *point, int debug_fd)
 {
 	int		num;
 	char	placed;
@@ -102,7 +108,7 @@ char			place_piece(t_player *player, t_point *point, int debug_fd)
 	return (num < 2);
 }
 
-char			close_place_piece(t_player *player, t_point *point, int debug_fd)
+char	close_place_piece(t_player *player, t_point *point, int debug_fd)
 {
 	ft_putstr_fd("Priority : ", debug_fd);
 	ft_putstr_fd((player->priority == DOWN) ? "DOWN" : "UP", debug_fd);

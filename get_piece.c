@@ -6,7 +6,7 @@
 /*   By: zphakath <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 15:00:13 by zphakath          #+#    #+#             */
-/*   Updated: 2018/04/22 15:00:24 by zphakath         ###   ########.fr       */
+/*   Updated: 2018/05/30 16:43:56 by zphakath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ void		add_piece_line(t_line **head, char *line)
 
 char		get_piece(char *line, t_player *player, int debug_fd)
 {
-
 	if (ft_strstr(line, "Piece"))
 	{
 		player->piece_height = get_height(line);

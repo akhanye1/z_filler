@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   advantage.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zphakath <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/30 16:38:59 by zphakath          #+#    #+#             */
+/*   Updated: 2018/05/30 16:41:05 by zphakath         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "filler.h"
 
 int		get_right_piece(t_player *player, int y, int x, int debug_fd)
 {
 	while ((player->plateau_piece[y][x] == player->piece_small ||
-		player->plateau_piece[y][x] == player->piece_large) &&
-		x < player->p_width)
+				player->plateau_piece[y][x] == player->piece_large) &&
+			x < player->p_width)
 	{
 		x++;
 	}
@@ -14,8 +26,8 @@ int		get_right_piece(t_player *player, int y, int x, int debug_fd)
 int		get_left_piece(t_player *player, int y, int x, int debug_fd)
 {
 	while ((player->plateau_piece[y][x] == player->piece_small ||
-		player->plateau_piece[y][x] == player->piece_large) &&
-		x > 0)
+				player->plateau_piece[y][x] == player->piece_large) &&
+			x > 0)
 	{
 		x--;
 	}
@@ -27,15 +39,15 @@ void	get_precise_up(t_player *player, t_point *point, int debug_fd)
 	if (player->second_priority == RIGHT)
 	{
 		player->decision.top.x = get_right_piece(player,
-			player->decision.top.y, player->decision.top.x,
-			debug_fd);
+				player->decision.top.y, player->decision.top.x,
+				debug_fd);
 		point->x = player->decision.top.x;
 	}
 	else
 	{
 		player->decision.top.x = get_left_piece(player,
-			player->decision.top.y, player->decision.top.x,
-			debug_fd);
+				player->decision.top.y, player->decision.top.x,
+				debug_fd);
 		point->x = player->decision.top.x;
 	}
 }
@@ -55,7 +67,7 @@ void	get_more_advantage(t_player *player, t_point *point)
 	else if (player->second_priority == LEFT)
 		point->x = player->decision.left.x;
 	if ((player->decision.bottom.y >= (player->p_height - 1)) &&
-		(player->decision.top.y <= 1))
+			(player->decision.top.y <= 1))
 		player->closed = TRUE;
 }
 

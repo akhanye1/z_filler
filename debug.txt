@@ -53,93 +53,109 @@ Player Number : 1
 
 >>>>>>>>
 
+Left X : 5  Bottom : 12
+
+>>>>>>>>
+
+Left X : 4  Bottom : 12
+
+>>>>>>>>
+
+Left X : 2  Bottom : 13
+
+>>>>>>>>
+
+Left X : 3  Bottom : 14
+
+>>>>>>>>
+
+Left X : 2  Bottom : 14
+
+>>>>>>>>
+
+Left X : 1  Bottom : 14
+
+>>>>>>>>
+
+Left X : -1  Bottom : 14
+
+>>>>>>>>
+
+Left X : 0  Bottom : 14
 
 >>>>>>>>
 
 
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
+**** CLOSING PLATEAU ****
+fill : RIGHT
+ X Position : 6
+Priority : DOWN | Second Priority : RIGHT - closed
 
 >>>>>>>>
 
 
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
+**** CLOSING PLATEAU ****
+fill : LEFT
+ X Position : 1
+Priority : DOWN | Second Priority : LEFT - closed
+Left X : 1  Bottom : 14
 
 >>>>>>>>
 
 
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
+**** CLOSING PLATEAU ****
+fill : RIGHT
+ X Position : 8
+Priority : DOWN | Second Priority : RIGHT - closed
 
 >>>>>>>>
 
 
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
+**** CLOSING PLATEAU ****
+fill : LEFT
+ X Position : 1
+Priority : DOWN | Second Priority : LEFT - closed
+Left X : -1  Bottom : 14
+fill : LEFT
+ X Position : 4
+Priority : DOWN | Second Priority : LEFT - closed
+Left X : 2  Bottom : 13
 
 >>>>>>>>
 
 
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
+**** CLOSING PLATEAU ****
+fill : RIGHT
+ X Position : 8
+Priority : DOWN | Second Priority : RIGHT - closed
 
 >>>>>>>>
 
 
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
+**** CLOSING PLATEAU ****
+fill : LEFT
+ X Position : 1
+Priority : DOWN | Second Priority : LEFT - closed
+Left X : 0  Bottom : 14
 
 >>>>>>>>
 
 
+**** CLOSING PLATEAU ****
+fill : RIGHT
+ X Position : 8
+Priority : DOWN | Second Priority : RIGHT - closed
+
 >>>>>>>>
 
 
->>>>>>>>
-
-
->>>>>>>>
-
+**** CLOSING PLATEAU ****
+fill : LEFT
+ X Position : -1
+fill : LEFT
+ X Position : 3
+Priority : DOWN | Second Priority : LEFT - closed
+Left X : 1  Bottom : 13
 
 >>>>>>>>
 

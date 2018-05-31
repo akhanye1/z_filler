@@ -112,11 +112,15 @@ static	void	find_spot(t_player *player, t_point *point, int up_down, int debug_f
 			if (close_place_piece(player, point, debug_fd))
 			{
 				print_piece(point->y - 1, point->x);
+				if (tries > 0)
+					player->second_priority = (check_side == LEFT) ? RIGHT : LEFT;
 				return ;
 			}
 			else
 				y = (up_down == UP) ? y + 1 : y - 1;
 		}
+		else
+			y = (up_down == UP) ? y + 1 : y - 1;
 		if ((y == player->p_height && up_down == UP) ||
 				(y == 0 && up_down == DOWN))
 		{

@@ -6,7 +6,7 @@
 /*   By: zphakath <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 16:36:21 by zphakath          #+#    #+#             */
-/*   Updated: 2018/05/30 16:50:39 by zphakath         ###   ########.fr       */
+/*   Updated: 2018/05/31 17:16:51 by zphakath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ char			place_piece_right_up(t_player *player, t_point *pp, int debug_fd)
 	t_point	ps;
 	int		overlap;
 	int		start_x;
-	
+
 	start_x = pp->x;
 	ps.x = 0;
 	ps.y = 0;

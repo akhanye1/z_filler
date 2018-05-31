@@ -38,7 +38,7 @@ int				return_overlap(t_player *player, t_point *pp, int debug_fd)
 				overlap++;
 		}
 		if (x != player->piece_width)
-			overlap = 2; //Forcing it to exit and try again.
+			overlap = 2;
 		x = -1;
 	}
 	return (overlap);

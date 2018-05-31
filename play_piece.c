@@ -78,12 +78,24 @@ void			get_precise_piece(t_player *player, int debug_fd, t_point *point)
 
 void			repeat_play(t_player *player, t_point *point, int debug_fd)
 {
+	ft_putstr_fd("Placing piece : ", debug_fd);
+	ft_putendl_fd((player->second_priority == LEFT) ? "Left" : "Right", debug_fd);
 	get_advantage(debug_fd, player, point);
+	ft_putstr_fd("Placing piece (Advantage) : ", debug_fd);
+	ft_putendl_fd((player->second_priority == LEFT) ? "Left" : "Right", debug_fd);
 	get_precise_piece(player, debug_fd, point);
+	ft_putstr_fd("Placing piece (Precise Piece) : ", debug_fd);
+	ft_putendl_fd((player->second_priority == LEFT) ? "Left" : "Right", debug_fd);
 	if (place_piece(player, point, debug_fd))
 		print_piece(point->y - 1, point->x);
 	else
+	{
+		ft_putstr_fd("Closing Placing piece : ", debug_fd);
+		ft_putendl_fd((player->second_priority == LEFT) ? "Left" : "Right", debug_fd);
 		close_plateau(player, point, debug_fd);
+	}
+	ft_putstr_fd("After Placing piece : ", debug_fd);
+	ft_putendl_fd((player->second_priority == LEFT) ? "Left" : "Right", debug_fd);
 }
 
 void			play_piece(t_player *player, int debug_fd, t_point *spoint)

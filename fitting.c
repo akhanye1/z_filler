@@ -103,8 +103,6 @@ char	place_piece(t_player *player, t_point *point, int debug_fd)
 		if (placed)
 			return (TRUE);
 	}
-	if (num > 1)
-		player->second_priority = (player->second_priority == LEFT) ? RIGHT : LEFT;
 	return (num < 2);
 }
 

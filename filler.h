@@ -87,4 +87,8 @@ int				get_right_piece(t_player *player, int y, int x, int debug_fd);
 int				get_left_piece(t_player *player, int y, int x, int debug_fd);
 void			get_pieces(int debug_fd, t_player *player);
 char			place_piece_right_up(t_player *player, t_point *pp, int debug_fd);
+int				fix_spot(t_player *player, int *y, int up_down, int tries);
+void			check_tries(int tries, t_player *player, int check_side);
+void			find_spot(t_player *player, t_point *point, int up_down, int debug_fd);
+char			find_piece(t_player *player, t_point *point, int up_down, int left_right);
 #endif

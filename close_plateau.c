@@ -105,6 +105,9 @@ static	void	find_spot(t_player *player, t_point *point, int up_down, int debug_f
 	while ((tries < 2) && ((y < (player->p_height - 1) && up_down == UP) ||
 				(y > 0 && up_down == DOWN)))
 	{
+		ft_putstr_fd("Y : ", debug_fd);
+		ft_putnbr_fd(y, debug_fd);
+		ft_putchar_fd('\n', debug_fd);
 		point->y = y;
 		if (find_piece(player, point, up_down, check_side, debug_fd))
 		{

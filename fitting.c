@@ -17,9 +17,10 @@ static char	no_enemy_piece(int x, int y, t_player *player, int debug_fd, char pi
 	char	found_valid_piece;
 
 	found_valid_piece = (player->plateau_piece[y][x] == '.' ||
-		player->plateau_piece[y][x] == player->piece_small ||
-		player->plateau_piece[y][x] == player->piece_large);
+		ft_toupper(player->plateau_piece[y][x]) == player->piece_large);		
 	found_valid_piece = (!found_valid_piece) ? (pieceat == '.') : found_valid_piece;
+	ft_putstr_fd("\nPiece : ", debug_fd);
+	ft_putendl_fd((found_valid_piece) ? "Found Enemy" : "Enemy not found", debug_fd);
 	return (found_valid_piece);
 }
 

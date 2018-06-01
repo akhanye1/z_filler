@@ -50,6 +50,7 @@ int				main(void)
 	init_player(player);
 	while (get_next_line(0, &line) > 0)
 	{
+		ft_putendl_fd("YYY", fd);
 		if (ft_strstr(line, "$$$ exec p"))
 			get_player_info(line, player, fd);
 		if (ft_strstr(line, "Plateau") || player->p_countdown > 0)
@@ -57,8 +58,13 @@ int				main(void)
 		if (ft_strstr(line, "Piece") || player->piece_countdown > 0)
 			get_piece(line, player, fd);
 		if (player->done_reading == 1)
+		{
 			play_piece(player, fd);
+			ft_putendl_fd(">>>>>>>>>>>>", fd);
+		}
 	}
+	ft_putendl_fd("<<<<<<<<<<", fd);
+	ft_putendl_fd(line, fd);
 	ft_putendl_fd("0 0", fd);
 	close(fd);
 	return (0);

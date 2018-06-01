@@ -6,7 +6,7 @@
 /*   By: zphakath <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 13:13:14 by zphakath          #+#    #+#             */
-/*   Updated: 2018/06/01 09:34:34 by zphakath         ###   ########.fr       */
+/*   Updated: 2018/06/01 12:49:13 by zphakath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ void	find_spot(t_player *player, t_point *point, int up_down, int debug_fd)
 				(y > 0 && up_down == DOWN)))
 	{
 		point->y = y;
+		ft_putstr_fd("Y : ", debug_fd);
+		ft_putnbr_fd(y, debug_fd);
+		ft_putchar_fd('\n', debug_fd);
 		if (find_piece(player, point, up_down, check_side))
 		{
 			y = point->y;
@@ -32,6 +35,7 @@ void	find_spot(t_player *player, t_point *point, int up_down, int debug_fd)
 			{
 				print_piece(point->y - 1, point->x);
 				check_tries(tries, player, check_side);
+				ft_putendl_fd("Found Piece", debug_fd);
 				return ;
 			}
 		}
@@ -39,6 +43,7 @@ void	find_spot(t_player *player, t_point *point, int up_down, int debug_fd)
 	}
 	check_tries(tries, player, check_side);
 	print_piece(0, 0);
+	ft_putendl_fd("Piece not found", debug_fd);
 }
 
 int		fix_spot(t_player *player, int *y, int up_down, int tries)

@@ -6,7 +6,7 @@
 /*   By: zphakath <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 13:13:14 by zphakath          #+#    #+#             */
-/*   Updated: 2018/04/22 13:13:15 by zphakath         ###   ########.fr       */
+/*   Updated: 2018/06/01 09:34:34 by zphakath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,26 +41,27 @@ void	find_spot(t_player *player, t_point *point, int up_down, int debug_fd)
 	print_piece(0, 0);
 }
 
-int				fix_spot(t_player *player, int *y, int up_down, int tries)
+int		fix_spot(t_player *player, int *y, int up_down, int tries)
 {
 	*y = (up_down == UP) ? *y + 1 : *y - 1;
 	if ((*y == player->p_height && up_down == UP) ||
 				(*y == 0 && up_down == DOWN))
 	{
 		*y = (up_down == UP) ? 0 : player->p_height - 2;
-		player->second_priority = (player->second_priority == LEFT) ? RIGHT : LEFT;
+		player->second_priority = (player->second_priority == LEFT) ? RIGHT :
+			LEFT;
 		tries++;
 	}
 	return (tries);
 }
 
-void			check_tries(int tries, t_player *player, int check_side)
+void	check_tries(int tries, t_player *player, int check_side)
 {
 	if (tries > 0)
 		player->second_priority = (check_side == LEFT) ? RIGHT : LEFT;
 }
 
-char			get_player_info(char *line, t_player *player, int debug_fd)
+char	get_player_info(char *line, t_player *player, int debug_fd)
 {
 	int		len;
 

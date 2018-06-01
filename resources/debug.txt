@@ -1,174 +1,32 @@
 Player Number : 1
 
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-
->>>>>>>>
-
-Left X : 61  Bottom : 70
-
->>>>>>>>
-
-Left X : 68  Bottom : 71
-
->>>>>>>>
-
-Left X : 66  Bottom : 74
-
->>>>>>>>
-
-Left X : 64  Bottom : 78
-
->>>>>>>>
-
-Left X : 59  Bottom : 82
-
->>>>>>>>
-
-Left X : 63  Bottom : 83
-
->>>>>>>>
-
-Left X : 58  Bottom : 87
-
->>>>>>>>
-
-Left X : 58  Bottom : 91
-
->>>>>>>>
-
-Left X : 56  Bottom : 93
-
->>>>>>>>
-
-Left X : 50  Bottom : 93
-
->>>>>>>>
-
-Left X : 52  Bottom : 93
-
->>>>>>>>
-
-Left X : 50  Bottom : 94
-
->>>>>>>>
-
-Left X : 52  Bottom : 97
-
->>>>>>>>
-
-Left X : 56  Bottom : 97
-
->>>>>>>>
-
+**** CLOSING PLATEAU ****
 
 **** CLOSING PLATEAU ****
-fill : RIGHT
- X Position : 56
-Priority : DOWN | Second Priority : RIGHT - closed
 
->>>>>>>>
+**** CLOSING PLATEAU ****
 
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
 0 0

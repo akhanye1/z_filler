@@ -6,7 +6,7 @@
 /*   By: zphakath <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 16:52:31 by zphakath          #+#    #+#             */
-/*   Updated: 2018/05/30 16:42:35 by zphakath         ###   ########.fr       */
+/*   Updated: 2018/06/01 08:45:38 by zphakath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,21 +79,18 @@ static	void	find_left(t_player *player, int dir, t_point *point)
 	set_piece_found(point, piece_found, y, x);
 }
 
-char	find_piece(t_player *player, t_point *point, int up_down, int left_right)
+char			find_piece(t_player *pl, t_point *pnt, int u_d, int l_r)
 {
-	if (left_right == LEFT)
-		find_left(player, up_down, point);
+	if (l_r == LEFT)
+		find_left(pl, u_d, pnt);
 	else
-		find_right(player, up_down, point);
-	return (point->x != -1);
+		find_right(pl, u_d, pnt);
+	return (pnt->x != -1);
 }
 
 void			close_plateau(t_player *player, t_point *point, int debug_fd)
 {
 	ft_putendl_fd("\n**** CLOSING PLATEAU ****", debug_fd);
-	ft_putstr_fd("Second Priority : ", debug_fd);
-	ft_putstr_fd((player->second_priority == LEFT) ? "Left" : "Right", debug_fd);
-	ft_putchar_fd('\n', debug_fd);
 	if (player->priority == UP)
 		find_spot(player, point, UP, debug_fd);
 	else if (player->priority == DOWN)

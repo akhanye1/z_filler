@@ -6,7 +6,7 @@
 /*   By: zphakath <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/14 09:45:40 by zphakath          #+#    #+#             */
-/*   Updated: 2018/04/22 15:20:54 by zphakath         ###   ########.fr       */
+/*   Updated: 2018/06/01 09:28:14 by zphakath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ typedef struct	s_player
 char			get_player_info(char *line, t_player *player, int debug_fd);
 char			get_plateau(char *line, t_player *player, int debug_fd);
 char			get_piece(char	*line, t_player *player, int debug_fd);
-void			play_piece(t_player *player, int debug_fd, t_point *spoint);
+void			play_piece(t_player *player, int debug_fd);
 void			free_memory(t_player *player, int debug_fd);
 char			place_piece(t_player *player, t_point *point, int debug_fd);
 void			fill_plateau(t_player *player, int debug_fd);
@@ -91,4 +91,7 @@ int				fix_spot(t_player *player, int *y, int up_down, int tries);
 void			check_tries(int tries, t_player *player, int check_side);
 void			find_spot(t_player *player, t_point *point, int up_down, int debug_fd);
 char			find_piece(t_player *player, t_point *point, int up_down, int left_right);
+char			place_piece_left_up(t_player *player, t_point *pp, int debug_fd);
+char			place_piece_right_bottom(t_player *pl, t_point *pp, int debug_fd);
+char			place_piece_left_bottom(t_player *player, t_point *pp, int debug_fd);
 #endif

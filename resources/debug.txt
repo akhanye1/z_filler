@@ -1,4 +1,5 @@
 Player Number : 1
+<<<<<<< HEAD
 Player Piece : O
 Bottom height : 15
 DOWN
@@ -3172,4 +3173,36 @@ Piece : Enemy not found
 
 >>>>>>>>
 
+=======
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+
+**** CLOSING PLATEAU ****
+>>>>>>> origin/master
 0 0

@@ -33,4 +33,7 @@ void	free_memory(t_player *player, int debug_fd)
 		free(player->piece_piece);
 		player->piece_piece = NULL;
 	}
+	player->done_reading = 0;
+	player->p_countdown = 0;
+	player->piece_countdown = 0;
 }

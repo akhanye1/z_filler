@@ -6,7 +6,7 @@
 /*   By: zphakath <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 12:36:27 by zphakath          #+#    #+#             */
-/*   Updated: 2018/04/22 12:52:52 by zphakath         ###   ########.fr       */
+/*   Updated: 2018/06/01 10:08:49 by zphakath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,39 +67,37 @@ void	fill_piece(t_player *player, int debug_fd)
 	player->piece_piece = temp;
 }
 
+void	set_player_position(t_player *player, int y, int x)
+{
+	player->decision.top.x = x;
+	player->decision.top.y = y;
+	player->decision.right.x = x;
+	player->decision.right.y = y;
+	player->decision.left.x = x;
+	player->decision.left.y = y;
+	player->decision.bottom.x = x;
+	player->decision.bottom.y = y;
+	player->num_played = TRUE;
+}
+
 char	scanforplay(int debug_fd, t_player *player, t_point *point,
 		t_point *spoint)
 {
-	int		platheight;
 	int		y;
 	int		x;
-	int		startX;
 	char	piecefound;
-	int		plays;
 
-	platheight = player->p_height;
 	y = spoint->y;
 	piecefound = FALSE;
-	while (y < (platheight) && !piecefound)
+	while (y < (player->p_height) && !piecefound)
 	{
 		x = 0;
 		while (x < player->p_width && !piecefound)
 		{
-			if (player->plateau_piece[y][x] == player->piece_small ||
-					player->plateau_piece[y][x] == player->piece_large)
+			if (player->plateau_piece[y][x] == player->piece_large)
 			{
-				if (!player->numPlayed)
-				{
-					player->decision.top.x = x;
-					player->decision.top.y = y;
-					player->decision.right.x = x;
-					player->decision.right.y = y;
-					player->decision.left.x = x;
-					player->decision.left.y = y;
-					player->decision.bottom.x = x;
-					player->decision.bottom.y = y;
-					player->numPlayed = TRUE;
-				}
+				if (!player->num_played)
+					set_player_position(player, y, x);
 				piecefound = TRUE;
 				point->y = y;
 				point->x = x;

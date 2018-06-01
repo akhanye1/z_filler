@@ -6,7 +6,7 @@
 /*   By: zphakath <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/17 13:24:05 by zphakath          #+#    #+#             */
-/*   Updated: 2018/06/01 09:39:57 by zphakath         ###   ########.fr       */
+/*   Updated: 2018/06/01 10:06:03 by zphakath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ void			play_piece(t_player *player, int debug_fd)
 	spoint.x = 0;
 	fill_plateau(player, debug_fd);
 	fill_piece(player, debug_fd);
-	if (!player->numPlayed)
+	if (!player->num_played)
 	{
 		if (!scanforplay(debug_fd, player, &point, &spoint) ||
 				!scan_enemy_pieces(debug_fd, player))

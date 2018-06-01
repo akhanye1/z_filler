@@ -6,7 +6,7 @@
 /*   By: zphakath <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/10 15:42:56 by zphakath          #+#    #+#             */
-/*   Updated: 2018/06/01 09:30:56 by zphakath         ###   ########.fr       */
+/*   Updated: 2018/06/01 10:04:25 by zphakath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static	void	init_player(t_player *player)
 	player->piece_countdown = 0;
 	player->piece_memory = NULL;
 	player->done_reading = 0;
-	player->numPlayed = 0;
+	player->num_played = 0;
 	player->priority = RIGHT;
 	player->closed = FALSE;
 }

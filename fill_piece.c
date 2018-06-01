@@ -6,7 +6,7 @@
 /*   By: zphakath <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 12:36:27 by zphakath          #+#    #+#             */
-/*   Updated: 2018/04/22 12:52:52 by zphakath         ###   ########.fr       */
+/*   Updated: 2018/06/01 10:08:49 by zphakath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	set_player_position(t_player *player, int y, int x)
 	player->decision.left.y = y;
 	player->decision.bottom.x = x;
 	player->decision.bottom.y = y;
-	player->numPlayed = TRUE;
+	player->num_played = TRUE;
 }
 
 char	scanforplay(int debug_fd, t_player *player, t_point *point,
@@ -96,7 +96,7 @@ char	scanforplay(int debug_fd, t_player *player, t_point *point,
 		{
 			if (player->plateau_piece[y][x] == player->piece_large)
 			{
-				if (!player->numPlayed)
+				if (!player->num_played)
 					set_player_position(player, y, x);
 				piecefound = TRUE;
 				point->y = y;

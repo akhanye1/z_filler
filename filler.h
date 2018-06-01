@@ -6,7 +6,7 @@
 /*   By: zphakath <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/14 09:45:40 by zphakath          #+#    #+#             */
-/*   Updated: 2018/06/01 09:28:14 by zphakath         ###   ########.fr       */
+/*   Updated: 2018/06/01 10:53:19 by zphakath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ typedef struct	s_player
 	int			done_reading;
 	char		**plateau_piece;
 	char		**piece_piece;
-	int			numPlayed;
+	int			num_played;
 	struct s_d	decision;
 	struct s_d	enemy;
 	char		priority;
@@ -80,18 +80,25 @@ void			get_all_enemy_pieces(int debug_fd, t_player *player);
 void			get_player_pieces(int debug_fd, t_player *player);
 void    		close_plateau(t_player *player, t_point *point, int debug_fd);
 void			print_piece(int y, int x);
-char	    	close_place_piece(t_player *player, t_point *point, int debug_fd);
+char	    	close_place_piece(t_player *player, t_point *point,
+					int debug_fd);
 void			get_precise_up(t_player *player, t_point *point, int debug_fd);
 void			get_advantage(int debug_fd, t_player *player, t_point *point);
 int				get_right_piece(t_player *player, int y, int x, int debug_fd);
 int				get_left_piece(t_player *player, int y, int x, int debug_fd);
 void			get_pieces(int debug_fd, t_player *player);
-char			place_piece_right_up(t_player *player, t_point *pp, int debug_fd);
+char			place_piece_right_up(t_player *player, t_point *pp,
+					int debug_fd);
 int				fix_spot(t_player *player, int *y, int up_down, int tries);
 void			check_tries(int tries, t_player *player, int check_side);
-void			find_spot(t_player *player, t_point *point, int up_down, int debug_fd);
-char			find_piece(t_player *player, t_point *point, int up_down, int left_right);
-char			place_piece_left_up(t_player *player, t_point *pp, int debug_fd);
-char			place_piece_right_bottom(t_player *pl, t_point *pp, int debug_fd);
-char			place_piece_left_bottom(t_player *player, t_point *pp, int debug_fd);
+void			find_spot(t_player *player, t_point *point, int up_down,
+					int debug_fd);
+char			find_piece(t_player *player, t_point *point, int up_down,
+					int left_right);
+char			place_piece_left_up(t_player *player, t_point *pp,
+					int debug_fd);
+char			place_piece_right_bottom(t_player *pl, t_point *pp,
+					int debug_fd);
+char			place_piece_left_bottom(t_player *player, t_point *pp,
+					int debug_fd);
 #endif

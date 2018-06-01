@@ -6,7 +6,7 @@
 /*   By: zphakath <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/14 09:45:40 by zphakath          #+#    #+#             */
-/*   Updated: 2018/06/01 10:53:19 by zphakath         ###   ########.fr       */
+/*   Updated: 2018/06/01 10:58:15 by zphakath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,9 +78,9 @@ char			scanforplay(int debug_fd, t_player *player, t_point *point,
 					t_point *spoint);
 void			get_all_enemy_pieces(int debug_fd, t_player *player);
 void			get_player_pieces(int debug_fd, t_player *player);
-void    		close_plateau(t_player *player, t_point *point, int debug_fd);
+void			close_plateau(t_player *player, t_point *point, int debug_fd);
 void			print_piece(int y, int x);
-char	    	close_place_piece(t_player *player, t_point *point,
+char			close_place_piece(t_player *player, t_point *point,
 					int debug_fd);
 void			get_precise_up(t_player *player, t_point *point, int debug_fd);
 void			get_advantage(int debug_fd, t_player *player, t_point *point);
